@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #30343f;
+    display: flex;
+}
+
+.header{
+    background-color:#191e2b;
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 10px;
+    letter-spacing: -1px;
+}
+
+aside {
+    width: 15%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color:#43464d ;
+}
