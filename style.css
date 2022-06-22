@@ -18,7 +18,32 @@ body {
     font-weight: 600;
     height: 80%;
     display: flex;
-    justify-content: baseline;
+    
+}
+
+.conteiner_one{
+    padding:  5% 10%;
+    align-content: center;
+}
+
+.conteiner-button ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    list-style-type: none;
+    font-size: 14px;
+}
+.boton{
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+   
+    transition: background-color 0.2s;
+    
+    cursor: pointer;
+    
 }
 
 .conteiner_two{
@@ -46,6 +71,7 @@ aside {
     width: 260px;
     height: 100%;
     display: flex;
+    color: #fff;
     flex-direction: column;
     justify-content: flex-start;
     padding: 30px 15px;
@@ -59,8 +85,8 @@ aside {
 }
 .conteiner_meme{
     width: 100%;
-    max-width: 610px;
-    height: 610px;
+    max-width: 600px;
+    height: 600px;
     background-color: black;
     position: relative;
     display: flex;
@@ -95,6 +121,6 @@ aside {
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    opacity: 5;
+    opacity: 1;
 }
     
