@@ -17,40 +17,52 @@
     <header class="header">
         <nav class="conteiner_one">
             <h1>GENERADOR DE MEMES</h1>
-            <!--****lista de botones para cambios de tema, letra e imagen****-->
+    <!--****lista de botones para cambios de tema, letra e imagen****-->
             <ul class="conteiner_button">
                 <li>
-                    <button class="button_text"></button>
-                    <i class="fas fa-file-image button-icon-text" aria-hidden="true"></i>
+                    <button class="button_text"> Imagen
+                        <i class="fas fa-file-image button-icon-text" aria-hidden="true"></i>
+                    </button>
+                    </i>
                 </li>
                 <li>
-                    <button class="button_text">
+                    <button class="button_text"> Texto
                         <i class="fas fa-font button-icon-text" aria-hidden="true"></i>
                     </button>
                 </li>
                 <li class="dark_theme">
-                    <button></button>
+                    <button> Modo Oscuro
+                        <i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>
+                    </button>
                 </li>
                  <li class="ligth_theme">
-                    <button></button>
+                    <button> Modo Claro
+                        <i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>
+                    </button>
                 </li>
             </ul>
         </nav>   
     </header>
+    <!-- finaliza encabezado con titulo y controles de menú -->
+    <!-- Comienza seccion de cuadro con imagen a modificar y parte central de la pagina -->
     <div class="conteiner_two">
-        <section class="conteiner_meme">
-            <div class="cuadro_meme">
-                <p id="top_tex">TOP TEXT</p>
-                <p id="botton_text">BOTTON TEXT</p>
-            </div>
-        </section>
-        <button id="descarga">Descarga</button>
-        <aside>
-            <!-- datos para modificar -->
+        <main class="main">
+            <section class="conteiner_meme">
+                <div class="cuadro_meme">
+                    <p id="top_tex" class="texto_meme">TOP TEXT</p>
+                    <div id="imagen_meme" aria-label="imagen de meme"></div>
+                    <p id="botton_text" class="texto_meme">BOTTON TEXT</p>
+                </div>
+            </section>
+            <button id="descarga"><i class="fas fa-download button-icon-text" aria-hidden=""true></i>
+                Descarga</button>
+        </main>
+        
+        <aside class="panel_oculto panel1 panel2">
+<!-- datos para modificar -->
+        </aside>
+            
  
-    
-
-
 
     <script src="./app.js"></script>
 </body>

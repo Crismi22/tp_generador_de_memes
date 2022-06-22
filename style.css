@@ -7,16 +7,31 @@
 body {
     background-color: #30343f;
     display: flex;
+    flex-direction: column;
 }
 
 .header{
     background-color:#191e2b;
     color: #fff;
     text-align: center;
-    font-size: 36px;
+    font-size: 20px;
     font-weight: 600;
-    margin: 10px;
-    letter-spacing: -1px;
+    height: 80%;
+    display: flex;
+    justify-content: baseline;
+}
+
+.conteiner_two{
+    background-image: url(imagenes/internet-meme-evolucion-arte.jpg);
+    /* opacity:.4; */
+}
+.main{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
 }
 
 aside {
@@ -26,3 +41,60 @@ aside {
     flex-direction: column;
     background-color:#43464d ;
 }
+
+.panel_oculto{
+    width: 260px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 15px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+
+}
+.conteiner_meme{
+    width: 100%;
+    max-width: 610px;
+    height: 610px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}    
+
+.texto_meme{
+    width: 100%;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 35px 50px;
+    font-size: 40px;
+    font-weight: 800;    
+}
+#top-tex{
+    top: 0;
+}
+#botton-text{
+    bottom: 0;
+}
+#imagen_meme {
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
+  }
+
+.cuadro_meme{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    opacity: 5;
+}
+    
