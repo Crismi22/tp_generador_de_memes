@@ -13,9 +13,113 @@
     <title>Generador de Memes CB</title>
 </head>
 <body>
+<!-- **********************************
+        header
+///////////////////////////////// -->
+    <header>
+        <h1>GENERADOR DE MEMES</h1>
+        <nav class="conteiner-button">
+           <button class="button button-nav" id="button-text-img"><i class="fas fa-file-image button-icon-text"
+            aria-hidden="true"></i>IMAGEN</button>
+           <button class="button button-nav" id="button-text-text"><i class="fas fa-font button-icon-text"
+            aria-hidden="true"></i>TEXTO</button>
+           <button class="button button-nav" id="button-modo-dark"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>MODO OSCURO</button>
+           <button class="button button-nav" id="button-modo-light"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i>MODO CLARO</button>
+        </nav>
+    </header>
+<!-- ****************************CONENEDOR GENERAL CENTRAL********** -->
+    <div class="contenedor-gral">
+        <main class="contenedor-meme">
+            <div class="caja-meme">
+                <p class="text-superior">TOP TEXT</p>
+                <div class="caja-imagen"></div>
+                <p class="text-inferior">BOTTOM TEXT</p>
+            </div>
+            <button type="button" class="button button-descarga" id="button-descarga"><i class="fas fa-download button-icon-text"
+            aria-hidden="true"></i>Descargar Meme</button>
+        </main>
+<!-- ****************CONTENEDOR DE PANELES DE CAMBIOS********** -->
+        <aside class="panel-cambios" id="panel">
+<!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
+            <section class="panel-imagen">
+                <h2 class="titulo-secundario-panel">IMAGEN</h2>
+                <div class="controles-varios">
+                    <h3 class="titulo-items">URL</h3>
+                    <input type="text" id="url-img" aria-label="url de la imagen para editar">
 
+                    <h3 class="titulo-items">FONDO</h3>
+                    <input type="color" value="#ffffff" aria-label="color de fondo">
 
+                    <select id="estilado" aria-label="mezcla de fondo de imagen">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="aclarar">Aclarar</option>
+                        <option value="oscurecer">Oscurecer</option>
+                        <option value="diferencia">Diferencia</option>
+                        <option value="luminocidad">Luminocidad</option>
+                        <option value="multiplicar">Multiplicar</option>
+                    </select>
+                </div>
+        <!-- *********CONTROL FILTROS************ -->
+                <div class="controles-varios">
+                    <form action="">
+                        <h3 class="titulo-items">FILTROS</h3>
 
+                        <label for="brillo">BRILLO</label>
+                        <input type="range" name="brillo" id="brillo" min="0" max="1" value="1" step="0.1">
+                        <label for="opacidad">OPACIDAD</label>
+                        <input type="range" name="opacidad" id="opacidad" min="0" max="1" value="1" step="0.1">
+                        <label for="contraste">CONTRASTE</label>
+                        <input type="range" name="contraste" id="contraste" min="100" max="1000" value="100">
+                        <label for="desenfoque">DESENFOQUE</label>
+                        <input type="range" name="desenfoque" id="desenfoque" min="0" max="10" value="0" step="0.1">
+                        <label for="gray-scale">ESCALA DE GRISES</label>
+                        <input type="range" name="gray-scale" id="gray-scale" min="0" max="100" value="0">
+                        <label for="sepia">SEPIA</label>
+                        <input type="range" name="sepia" id="sepia" min="0" max="100" value="0">
+                        <label for="hue">HUE</label>
+                        <input type="range" name="hue" id="hue" min="0" max="360" value="0">
+                        <label for="saturacion">SATURACIÓN</label>
+                        <input type="range" name="saturacion" id="saturacion" min="100" max="1000" value="100" step="10">
+                        <label for="negativo">NEGATIVO</label>
+                        <input type="range" name="negativo" id="negativo" min="0" max="1" value="0" step="0.1">
+            
+                        <button class="button restablecer" id="default">REESTABLECER FILTROS</button>
+                    </form>
+                </div>
+            </section>
+<!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
+            <section class="panel-texto">
+                <h2 class="titulo-secundario-panel">TEXTO</h2>
+                <div class="controles-varios">
+                    <h3 class="titulo-items">TEXTO SUPERIOR</h3>
+                    <textarea aria-label="texto superior editable" name="texto superior" id="top-text">TOP TEXT</textarea>
+                    <div class="control-checkbox">
+                        <input type="checkbox" id="not-top"><label for="not-top">Sin texto superior</label>
+                    </div>
+                    <h3 class="titulo-items">TEXTO INFERIOR</h3>
+                    <textarea aria-label="texto inferior editable" name="texto inferior" id="button-text">BUTTON TEXT</textarea>
+                    <div class="control-checkbox">
+                        <input type="checkbox" id="not-button"><label for="not-buttton">Sin texto inferior</label>
+                    </div>
+                    <div>
+                        <h3 class="titulo-items">FUENTE</h3>
+                        <select name="Estilos fuente" id="elegir-fuente" aria-label="Estilos de fuente">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="American Typewriter">American Typewriter</option>
+                            <option value="Andale Mono">Andale Mono</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                          </select>
+                    </div>
+                </div>
+            </section>
+
+        </aside>
+    </div>
     <script src="./app.js"></script>
 </body>
 </html>
