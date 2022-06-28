@@ -4,3 +4,61 @@
     box-sizing: border-box;
 }
 
+.header{
+    background-color: #191e2b;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.contenedor-gral{
+    display: flex;
+    background-image: url(/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg);
+    color: #fff;
+    
+}
+
+.contenedor-meme{
+    width: 100%;
+    max-width: 590px;
+    height: 590px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja-meme{
+    /* width: 100%;
+    max-width: 590px;
+    height: 590px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column; */
+}
+
+.panel-cambios{
+    background-color: #252935;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    
+}
+
+.columna-cambios{
+    width: 260px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--color-panel);
+    padding: 30px 15px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
+    z-index: 10;
+}
