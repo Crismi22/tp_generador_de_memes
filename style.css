@@ -3,62 +3,100 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
+/* +++++++++++++++++++
+HEADER
++++++++++++++++++++ */
 .header{
     background-color: #191e2b;
     color: #fff;
     text-align: center;
     padding: 10px;
 }
+h1{
+    font-size: 1.8em;
+    margin: 10px;
+}
+.button-nav{
+    font-size: .8em;
+    border-radius: 10%;
+    background-color:#191e2b;
+    color: #fff;
+    border-style: none;
+    padding: 5px;
+}
+
+.button-nav:hover{
+    background-color: #41315f;
+    padding: 5px;
+}
+
+/* +++++++++++++++++++
+CONTENEDOR CENTRAL - MEME
++++++++++++++++++++ */
 
 .contenedor-gral{
-    display: flex;
-    background-image: url(/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg);
+    background-image: url(/imagenes/dark-meme-evolucion-arte.jpg);
+    background-size:contain;
     color: #fff;
     
 }
 
 .contenedor-meme{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+
+.caja-meme{
     width: 100%;
     max-width: 590px;
     height: 590px;
     background-color: black;
-    position: relative;
     display: flex;
     flex-direction: column;
 }
+.text-superior{
+    height: 10%;
+    background-color: #fff;
+    color: #000;
+    top: 0%;
+}
+.text-inferior{
+    height: 10%;
+    background-color: #fff;
+    color: #000;
+    bottom: 0%;
+}
 
-.caja-meme{
-    /* width: 100%;
-    max-width: 590px;
+.caja-imagen{
     height: 590px;
-    background-color: black;
-    position: relative;
-    display: flex;
-    flex-direction: column; */
+    max-width: 590px;
+    stroke-width: 100%;
 }
 
 .panel-cambios{
-    background-color: #252935;
+    /* background-color: #252935;
     color: #fff;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 30%; */
+    
     
 }
 
 .columna-cambios{
-    width: 260px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: var(--color-panel);
+    background-color: #252935;
+    width: 260px;
+    height: 100%;
     padding: 30px 15px;
     overflow: auto;
     position: fixed;
     top: 0;
     right: 0;
     box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
-    z-index: 10;
+    z-index: 5;
 }
