@@ -3,6 +3,7 @@
     padding: 0%;
     box-sizing: border-box;
 }
+/* PRIMER INTENTO DE MODO OSCURO */
 /* +++++++++++++++++++
 HEADER
 +++++++++++++++++++ */
@@ -12,10 +13,52 @@ HEADER
     text-align: center;
     padding: 10px;
 }
+/*//////// ESTILADO POR ETIQUETA */
 h1{
     font-size: 1.8em;
     margin: 10px;
 }
+h2{
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+    margin-top: 0;
+}
+h3{
+    font-size: .8em;
+    margin: 5px 0;
+}
+input, textarea, select{
+    display: block;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    background-color: #393e49;
+    text-align: center;
+}
+input, textarea, select:hover{
+    background-color: #41315f;
+}
+
+
+.control-checkbox{
+    font-size: .7em;
+    display: flex;
+    margin: 5px 0 ;
+}
+/* +++++++++++++++input-color-botones-boostrap */
+.input-color{
+    background-color: #41315f;
+    font-size: .8em;
+    outline: 0;
+    border: 0;
+}
+.input-color:hover{
+    background-color:#252935;
+}
+
+
 .button-nav{
     font-size: .8em;
     border-radius: 10%;
@@ -23,6 +66,7 @@ h1{
     color: #fff;
     border-style: none;
     padding: 5px;
+    
 }
 
 .button-nav:hover{
