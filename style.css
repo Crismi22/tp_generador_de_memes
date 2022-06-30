@@ -13,6 +13,8 @@ HEADER
     text-align: center;
     padding: 10px;
 }
+
+/* ********TITULOS DE COLUMNAS Y SECCIONES DE ESTILADOS***** */
 /*//////// ESTILADO POR ETIQUETA */
 h1{
     font-size: 1.8em;
@@ -22,43 +24,45 @@ h2{
     font-size: 1.3em;
     text-align: center;
     font-weight: 700;
-    padding: 20px;
     margin-top: 0;
+    margin-bottom: 15px;    
 }
 h3{
     font-size: .8em;
-    margin: 5px 0;
+    margin-top: 10px;
+    
 }
-input, textarea, select{
+textarea{
+    width: 100%;
+    height: 30px;
+    background-color: #41315f;
+    color: #fff;
+    text-align: center;
+}
+textarea:hover{
+    background-color: #393e49;
+}
+input, select{
     display: block;
     outline: 0;
     border: 0;
     color: #fff;
+    height: 30px;
     background-color: #393e49;
     text-align: center;
 }
-input, textarea, select:hover{
+input:hover, select:hover{
     background-color: #41315f;
 }
-
-
-.control-checkbox{
-    font-size: .7em;
-    display: flex;
-    margin: 5px 0 ;
-}
-/* +++++++++++++++input-color-botones-boostrap */
-.input-color{
-    background-color: #41315f;
+span{
     font-size: .8em;
-    outline: 0;
-    border: 0;
 }
-.input-color:hover{
-    background-color:#252935;
+label{
+    font-size: 12px;
 }
 
-
+/* ****ENCABEZADO*****
+****************** */
 .button-nav{
     font-size: .8em;
     border-radius: 10%;
@@ -73,16 +77,196 @@ input, textarea, select:hover{
     background-color: #41315f;
     padding: 5px;
 }
+/* ******COLUMNA DE CAMBIOS DE ESTILOS******** */
+
+.columna-cambios{
+    background-color: #252935;
+    color: #fff;
+    flex-direction: column;
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #252935;
+    width: 260px;
+    height: 100%;
+    padding: 30px 15px;
+    overflow: auto;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
+    z-index: 5;
+}
+/* *****PANEL CAMBIOS - COLUMNA IMAGEN**** */
+.url-input{
+    width: 100%;
+    background-color:#574479;
+}
+
+.fondo-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.restablecer{
+    background-color: #574479;
+    font-size: .8em;
+    color: #fff;
+    padding: 5px;
+    border: #574479;
+    margin-top: 10px;
+    margin-left: 25%;
+}
+
+/* ***controles range estilado*** */
+
+.slidecontainer {
+    width: 100%;
+}
+  
+.barRango {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #574479;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+  
+.barRango:hover {
+    opacity: 1;
+  }
+  
+.barRango::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+    box-shadow:0px 0px 11px 8px rgba(0,0,0,0.26);
+}
+  
+.barRango::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #a4f3;
+    cursor: pointer;
+    box-shadow:0px 0px 11px 8px rgba(0,0,0,0.26);
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* *****PANEL CAMBIOS - COLUMNA TEXTO**** */
+
+.control-input, .fuente-select{
+    width: 100%;
+    height: 30px;
+}
+.panel-control-input{
+    width: 50%;
+    height: 30px;
+    margin-top: 10px;
+}
+.control-fuente{
+    display: flex;
+}
+.btn-aling{
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.btn-aling button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: #fff;
+    background-color: #41315f;
+}
+.panel-control-input:hover, .control-fuente:hover, .btn-aling button:hover{
+    background-color: #191e2b;
+}
+/* +++++++++++++++input-color-botones-boostrap */
+.input-color, .fuente-select{
+    background-color: #41315f;
+    font-size: .8em;
+    outline: 0;
+    border: 0;
+    
+}
+.input-color:hover, .fuente-select:hover{
+    background-color:#252935;
+}
+/* ++++++++++++++++++fin de estilado de botones framework */
+
+.control-checkbox{
+    font-size: .7em;
+    display: flex;
+    margin: 5px 0 ;  
+}
+
+.color-texto,.btn-color{
+    display: flex;   
+}
+.btn-color{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 1px;
+    background-color: #41315f;
+}
+.btn-color:hover{
+    background-color: #252935;
+}
+.incolor{
+    width: 50%;
+    margin-top: 10px;
+}
+
+#incolor{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+#incolor::-webkit-color-swatch {
+    border-radius: 50%;
+}
+#style2::-moz-color-swatch {
+    border-radius: 50%;
+}
+/* boton cierre panel */
+.panel-close-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* ****fin de columna texto****** */
+
 
 /* +++++++++++++++++++
 CONTENEDOR CENTRAL - MEME
 +++++++++++++++++++ */
 
 .contenedor-gral{
-    background-image: url(/imagenes/dark-meme-evolucion-arte.jpg);
+    background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg');
     background-size:contain;
-    color: #fff;
-    
+ 
 }
 
 .contenedor-meme{
@@ -119,28 +303,18 @@ CONTENEDOR CENTRAL - MEME
     stroke-width: 100%;
 }
 
-.panel-cambios{
-    /* background-color: #252935;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    width: 30%; */
-    
-    
+.button-descarga{
+    margin-top: 30px;
+    padding: 15px 15px;
+    height: auto;
+    background-color: #2e7d32;
+    color:#fff;
+    border: #2e7d32;
+}
+.button-descarga:hover{
+    background-color: #574479;
 }
 
-.columna-cambios{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #252935;
-    width: 260px;
-    height: 100%;
-    padding: 30px 15px;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
-    z-index: 5;
-}
+
+
+

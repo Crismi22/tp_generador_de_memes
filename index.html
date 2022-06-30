@@ -15,7 +15,8 @@
     <title>Generador de Memes CB</title>
 </head>
 <body class="dark-dark">
-<!-- header -->
+<!-- HEADER -->
+<!-- ++++++++++++++++ -->
     <header class="header dark-dark">
         <h1>GENERADOR DE MEMES</h1>
         <nav class="conteiner-button">
@@ -36,54 +37,62 @@
                 <p class="text-inferior">BOTTOM TEXT</p>
             </div>
             <button type="button" class="button button-descarga" id="button-descarga"><i class="fas fa-download button-icon-text"
-            aria-hidden="true"></i>Descargar Meme</button>
+            aria-hidden="true"></i> Descargar Meme </button>
         </main>
 <!-- ****************CONTENEDOR DE PANELES DE CAMBIOS********** -->
+        <button class="panel-close-button" id="panel-close-button" aria-label="Cerrar panel">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <!-- boton cierre -->
         <aside class="panel-cambios dark-dark" id="panel">
 <!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
             <section class="panel-imagen columna-cambios">
                 <h2 class="titulo-secundario-panel">IMAGEN</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">URL</h3>
-                    <input type="text" id="url-img" aria-label="url de la imagen para editar">
+                    <input type="text" class="url-input" id="url-img" aria-label="url de la imagen para editar">
 
                     <h3 class="titulo-items">FONDO</h3>
-                    <input type="color" value="#ffffff" aria-label="color de fondo">
-
-                    <select id="estilado" aria-label="mezcla de fondo de imagen">
-                        <option value="ninguno">Ninguno</option>
-                        <option value="aclarar">Aclarar</option>
-                        <option value="oscurecer">Oscurecer</option>
-                        <option value="diferencia">Diferencia</option>
-                        <option value="luminocidad">Luminocidad</option>
-                        <option value="multiplicar">Multiplicar</option>
-                    </select>
+                    <div class="fondo-div">
+                        <div class="btn-color btn-color-imagen">
+                            <input type="color" id="incolor" value="#000000" aria-label="color de texto">
+                            <span id="texto-color">#000000</span>
+                        </div>
+                        
+                        <select id="estilado" aria-label="mezcla de fondo de imagen">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="aclarar">Aclarar</option>
+                            <option value="oscurecer">Oscurecer</option>
+                            <option value="diferencia">Diferencia</option>
+                            <option value="luminocidad">Luminocidad</option>
+                            <option value="multiplicar">Multiplicar</option>
+                        </select>
+                    </div>
                 </div>
         <!-- *********CONTROL FILTROS************ -->
-                <div class="controles-varios">
+                <div class="controles-varios slidecontainer">
                     <form action="">
                         <h3 class="titulo-items">FILTROS</h3>
-
                         <label for="brillo">BRILLO</label>
-                        <input type="range" name="brillo" id="brillo" min="0" max="1" value="1" step="0.1">
+                        <input type="range" name="brillo" class="barRango" id="brillo" min="0" max="1" value="1" step="0.1">
                         <label for="opacidad">OPACIDAD</label>
-                        <input type="range" name="opacidad" id="opacidad" min="0" max="1" value="1" step="0.1">
+                        <input type="range" name="opacidad" class="barRango" id="opacidad" min="0" max="1" value="1" step="0.1">
                         <label for="contraste">CONTRASTE</label>
-                        <input type="range" name="contraste" id="contraste" min="100" max="1000" value="100">
+                        <input type="range" name="contraste" class="barRango" id="contraste" min="100" max="1000" value="100">
                         <label for="desenfoque">DESENFOQUE</label>
-                        <input type="range" name="desenfoque" id="desenfoque" min="0" max="10" value="0" step="0.1">
+                        <input type="range" name="desenfoque" class="barRango" id="desenfoque" min="0" max="10" value="0" step="0.1">
                         <label for="gray-scale">ESCALA DE GRISES</label>
-                        <input type="range" name="gray-scale" id="gray-scale" min="0" max="100" value="0">
+                        <input type="range" name="gray-scale" class="barRango"id="gray-scale" min="0" max="100" value="0">
                         <label for="sepia">SEPIA</label>
-                        <input type="range" name="sepia" id="sepia" min="0" max="100" value="0">
+                        <input type="range" class="barRango" name="sepia" id="sepia" min="0" max="100" value="0">
                         <label for="hue">HUE</label>
-                        <input type="range" name="hue" id="hue" min="0" max="360" value="0">
+                        <input type="range" name="hue" class="barRango" id="hue" min="0" max="360" value="0">
                         <label for="saturacion">SATURACIÓN</label>
-                        <input type="range" name="saturacion" id="saturacion" min="100" max="1000" value="100" step="10">
-                        <label for="negativo">NEGATIVO</label>
-                        <input type="range" name="negativo" id="negativo" min="0" max="1" value="0" step="0.1">
+                        <input type="range" name="saturacion" class="barRango" id="saturacion" min="100" max="1000" value="100" step="10">
+                        <label for="negativo" class="label" >NEGATIVO</label>
+                        <input type="range" name="negativo" class="barRango" id="negativo" min="0" max="1" value="0" step="0.1">
             <!-- //++++++BOTON DE REESTABLECER FILTROS+++++// -->
-                        <button class="button restablecer" id="default">REESTABLECER FILTROS</button>
+                        <button class="button restablecer" id="default">RESTABLECER FILTROS</button>
                     </form>
                 </div>
             </section>
@@ -101,10 +110,10 @@
                     <div class="control-checkbox">
                         <input type="checkbox" id="not-button"><label for="not-buttton">Sin texto inferior</label>
                     </div>
-                    <!-- //++++tipo de fuente+++// -->
+                    <!-- //++++TIPO DE FUENTE+++// -->
                     <div class="control">
                         <h3 class="titulo-items">FUENTE</h3>
-                        <select name="Estilos fuente" id="elegir-fuente" aria-label="Estilos de fuente">
+                        <select name="Estilos fuente" class="fuente-select" id="elegir-fuente" aria-label="Estilos de fuente">
                             <option value="Arial">Arial</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="American Typewriter">American Typewriter</option>
@@ -115,31 +124,36 @@
                             <option value="Verdana">Verdana</option>
                             <option value="Times New Roman">Times New Roman</option>
                         </select>
-   
                     </div>
                     <div class="control-fuente">
                         <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente" class="panel-control-input" id="text-size-input" min="12"
                         value="40" />
-                        <button class="button" id="text-left-align-button"
-                        aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
-                        <button class="button" id="text-center-align-button"
-                        aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
-                        <button class="button" id="text-right-align-button"
-                        aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
-                    </div>
-                    <div class="color-texto flex">
-                        <h3 class="titulo-items">COLOR</h3>
-                        <div class="input-color">
-                            <input type="color" name="color de texto" value="#000000" aria-label="color de texto">
-                            <span id="texto-color">#000000</span>
-                        </div>
-                        <h3 class="titulo-items">FONDO</h3>
-                        <div class="input-color">
-                            <input type="color" name="color de texto" value="#FFFFFF" aria-label="color de texto">
-                            <span id="texto-color">#FFFFFF</span>
+                        <div class="btn-aling">
+                            <button id="text-left-align-button"
+                            aria-label="Alinear texto a la izquierda"><i class="fas fa-align-left" aria-hidden="true"></i></button>
+                            <button id="text-center-align-button"
+                            aria-label="Alinear texto al centro"><i class="fas fa-align-center" aria-hidden="true"></i></button>
+                            <button id="text-right-align-button"
+                            aria-label="Alineat texto a la derecha"><i class="fas fa-align-right" aria-hidden="true"></i></button>
                         </div>
                     </div>
-                    <div class="fondo-checkbox">
+                    <div class="color-texto">
+                        <div class="incolor">
+                            <h3 class="titulo-items">COLOR</h3>
+                            <div class="btn-color">
+                                <input type="color" id="incolor" value="#000000" aria-label="color de texto">
+                                <span id="texto-color">#000000</span>
+                            </div>
+                        </div>
+                        <div class="incolor">
+                            <h3 class="titulo-items">FONDO</h3>
+                            <div class="btn-color">
+                                <input type="color" id="incolor" value="#FFFFFF" aria-label="color de fondo">
+                                <span id="texto-color">#FFFFFF</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-checkbox">
                         <input type="checkbox" id="sin-fondo"><label for="sin-fondo"> Fondo
                           transparente</label>
                     </div>
