@@ -3,7 +3,7 @@
     padding: 0%;
     box-sizing: border-box;
 }
-/* PRIMER INTENTO DE MODO OSCURO */
+
 /* +++++++++++++++++++
 HEADER
 +++++++++++++++++++ */
@@ -13,6 +13,15 @@ HEADER
     text-align: center;
     padding: 10px;
 }
+
+/* .modo-light{
+    /* --color-header: #b49adf;
+    --color-section: #a24ef1; */
+/* background-color: thistle;
+}  */ 
+
+    /* .contenedor-gral{
+        background-image: url('/tp-generador-de-memes/imagenes/internet-meme-evolucion-arte.jpg');} */
 
 /* +++++++++++++++++++
 CONTENEDOR CENTRAL - MEME
@@ -41,7 +50,7 @@ CONTENEDOR CENTRAL - MEME
     flex-direction: column;
     font-size: 30px;
     font-weight: 800;
-}
+} 
 
 .text-superior{
     height: 10%;
@@ -65,7 +74,7 @@ CONTENEDOR CENTRAL - MEME
 
 .button-descarga{
     margin-top: 10px;
-    padding: 15px 15px;
+    padding: 12px 12px;
     height: auto;
     background-color: #2e7d32;
     color:#fff;
@@ -121,7 +130,7 @@ span{
 }
 label{
     font-size: 12px;
-}
+} 
 
 /* ****ENCABEZADO*****
 ****************** */

@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Generador de Memes CB</title>
 </head>
-<body class="dark-dark">
+<body class="dark-dark modo-light">
 <!-- HEADER -->
 <!-- ++++++++++++++++ -->
-    <header class="header dark-dark">
+    <header class="header dark-dark modo-light">
         <h1>GENERADOR DE MEMES</h1>
         <nav class="conteiner-button">
            <button class="button button-nav" id="button-text-img"><i class="fas fa-file-image button-icon-text"
             aria-hidden="true"></i> IMAGEN </button>
            <button class="button button-nav" id="button-text-text"><i class="fas fa-font button-icon-text"
             aria-hidden="true"></i> TEXTO </button>
-           <button class="button button-nav" id="button-modo-dark"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i> MODO OSCURO </button>
+           <button type="button" class="button-nav" id="button-modo-dark"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i> MODO OSCURO </button>
            <button class="button button-nav" id="button-modo-light"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i> MODO CLARO </button>
         </nav>
     </header>
@@ -32,9 +32,12 @@
     <div class="contenedor-gral dark-dark">
         <main class="contenedor-meme">
             <div class="caja-meme">
-                <p class="text-superior">TOP TEXT</p>
+               
+                <p id="textoTop" class="text-superior">TOP TEXT</p>
                 <div src="" alt="" id="caja-imagen" aria-label="Imagen de meme"></div>
-                <p class="text-inferior">BOTTOM TEXT</p>
+                <p id="textoInf"
+                class="text-inferior">BOTTOM TEXT</p>
+               
             </div>
             <button type="button" class="button button-descarga" id="button-descarga"><i class="fas fa-download button-icon-text"
             aria-hidden="true"></i> Descargar Meme </button>
@@ -47,9 +50,9 @@
             <i class="fas fa-times" aria-hidden="true"></i>
         </button>
 <!--                    boton cierre -->
-        <aside class="panel-cambios oculto dark-dark" id="panel">
+        <aside class="panel-cambios oculto dark-dark modo-light id="panel">
 <!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
-            <section class="panel-imagen columna-cambios">
+            <section class="panel-imagen columna-cambios modo-light">
                 <h2 class="titulo-secundario-panel">IMAGEN</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">URL</h3>
@@ -100,16 +103,16 @@
                 </div>
             </section>
 <!-- *****************PANEL DE CAMBIOS TEXTO********** -->
-            <section class="panel-texto columna-cambios">
+            <section class="panel-texto columna-cambios modo-light">
                 <h2 class="titulo-secundario-panel">TEXTO</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">TEXTO SUPERIOR</h3>
-                    <textarea aria-label="texto superior editable" name="texto superior" id="top-text">TOP TEXT</textarea>
+                    <textarea id="input" aria-label="texto superior editable" name="texto superior" id="top-text">TOP TEXT</textarea>
                     <div class="control-checkbox">
                         <input type="checkbox" id="not-top"><label for="not-top">Sin texto superior</label>
                     </div>
                     <h3 class="titulo-items">TEXTO INFERIOR</h3>
-                    <textarea aria-label="texto inferior editable" name="texto inferior" id="button-text">BUTTON TEXT</textarea>
+                    <textarea class="input" aria-label="texto inferior editable" name="texto inferior" id="button-text">BUTTON TEXT</textarea>
                     <div class="control-checkbox">
                         <input type="checkbox" id="not-button"><label for="not-buttton">Sin texto inferior</label>
                     </div>
