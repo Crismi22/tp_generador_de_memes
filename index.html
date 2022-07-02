@@ -52,7 +52,7 @@
 <!--                    boton cierre -->
         <aside class="panel-cambios oculto dark-dark modo-light id="panel">
 <!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
-            <section class="panel-imagen columna-cambios modo-light">
+            <section class="panel-imagen columna-cambios modo-light" id="panel-imagen">
                 <h2 class="titulo-secundario-panel">IMAGEN</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">URL</h3>
@@ -103,16 +103,16 @@
                 </div>
             </section>
 <!-- *****************PANEL DE CAMBIOS TEXTO********** -->
-            <section class="panel-texto columna-cambios modo-light">
+            <section class="panel-texto columna-cambios modo-light" id="panel-texto">
                 <h2 class="titulo-secundario-panel">TEXTO</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">TEXTO SUPERIOR</h3>
-                    <textarea id="input" aria-label="texto superior editable" name="texto superior" id="top-text">TOP TEXT</textarea>
+                    <textarea id="inputTop" aria-label="texto superior editable" name="texto superior" id="top-text">TOP TEXT</textarea>
                     <div class="control-checkbox">
                         <input type="checkbox" id="not-top"><label for="not-top">Sin texto superior</label>
                     </div>
                     <h3 class="titulo-items">TEXTO INFERIOR</h3>
-                    <textarea class="input" aria-label="texto inferior editable" name="texto inferior" id="button-text">BUTTON TEXT</textarea>
+                    <textarea id="inputB" aria-label="texto inferior editable" name="texto inferior">BUTTON TEXT</textarea>
                     <div class="control-checkbox">
                         <input type="checkbox" id="not-button"><label for="not-buttton">Sin texto inferior</label>
                     </div>

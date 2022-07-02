@@ -6,26 +6,30 @@
 //     btnLight.classList.toggle('.modo-light')
 // })
 
+const btnImg = document.getElementById('button-text-img');
+const btnText = document.getElementById('button-text-text');
+
+const panelImagen = document.getElementById('panel-imagen');
+const panelTexto = document.getElementById('panel-texto');
+
+
+
 // DALE KRIS!! VOS PODES CON ESTO! SOS INTELIGENTE, SOS CAPAZ Y TE LO MERECES PARA SEGUIR AVANZANDO Y CRECIENDO. FALTA CADA VEZ MENOS PARA EL FUTURO QUE ESTAS ESPERANDO FELIZ
 
-//INTENTO PARTE INPUT TEXTO CAJA MEME////
+//PARTE INPUT TEXTO CAJA MEME////
 
-// const actualizarTextos = () => {
-//     $('top-text').innerText = $('top-text').value;
-//   }
-// const inicializarTexto = () => {
-//     $('top-text').addEventListener('input', actualizarTextos)
-// }
-const input = document.getElementById('input')
+const inputTop = document.getElementById('inputTop')
 const supText = document.getElementById('textoTop'); 
-// const infTExt = document.getElementById('textoInf');
+const infText = document.getElementById('textoInf');
+const inputB = document.getElementById('inputB')
 
-input.addEventListener('input', (event) => {
+
+inputTop.addEventListener('input', (event) => {
     const textoIngresado = event.target.value;
     supText.innerHTML = textoIngresado;
 })
 
-// input.addEventListener('input', (event) => {
-//     const textoIngresado2 = event.target.value;
-//     textoInf.innerHTML = textoIngresado2;
-// })
+inputB.addEventListener('input', (event) => {
+    const textoIngresado2 = event.target.value;
+    infText.innerHTML = textoIngresado2;
+})
