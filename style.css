@@ -13,15 +13,90 @@ HEADER
     text-align: center;
     padding: 10px;
 }
+/* *********************************
+            *CAMBIAR A MODO CLARO*
+************************** */
+#button-modo-light{
+    display: none;
+}
 
-/* .modo-light{
-    --color-header: #b49adf;
-    --color-section: #a24ef1;
-    background-color: thistle;
-}   */
-
-    /* .contenedor-gral{
-        background-image: url('/tp-generador-de-memes/imagenes/internet-meme-evolucion-arte.jpg');} */
+.modo-light{
+   background-color: #9f4ae4;   
+}
+.modo-light .header{
+    background-color:#b49adf;
+}
+.modo-light h1, h2, h3{
+    color: #41315f;
+    font-weight: 700;
+    font-size: 2em;
+}
+.modo-light .button-nav{
+    background-color: #41315f;
+}
+.modo-light .contenedor-gral{
+    background-image: url('/tp-generador-de-memes/imagenes/internet-meme-evolucion-arte.jpg');
+    background-size: contain;
+} 
+.modo-light .caja-meme{
+    border: 1px solid #41315f;
+    box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
+}
+.modo-light .columna-cambios{
+    background-color: #a24ef1;
+}
+.modo-light input{
+    background-color: #fff;
+    color: #000;
+}  
+.modo-light textarea, .modo-light select{
+    background-color: #fff;
+    color: #000;
+}
+.modo-light .fuente-select{
+    background-color: #fff;
+}
+.modo-light .btn-color{
+    background-color: #fff;
+    color: #41315f;
+    font-weight: 600;
+}
+.modo-light .control-checkbox{
+    color: #191e2b;
+    font-weight: 500;
+}
+.modo-light .button-nav:hover{
+    background-color: #574479;
+}
+.modo-light textarea:hover{
+    background-color: #574479;
+    color:#fff;
+}
+.modo-light select:hover{
+    background-color: #574479;
+    color:#fff;
+}
+.modo-light .fuente-select:hover{
+    background-color: #574479;
+    color:#fff;
+}
+.modo-light .btn-color:hover{
+    background-color:#574479;
+    color: #fff;
+}
+.modo-light .input-color:hover{
+    background-color: #9c70e2;
+    color: #000;
+    font-weight: 500;
+}
+.modo-light .panel-control-input:hover{
+    background-color: #574479;
+    color:#fff;
+}
+.modo-light .control-input:hover{
+    background-color: #574479;
+    color:#fff;
+}
 
 /* +++++++++++++++++++
 CONTENEDOR CENTRAL - MEME
@@ -41,8 +116,9 @@ CONTENEDOR CENTRAL - MEME
 }
 
 .caja-meme{
+    margin-top: 10px;
     width: 100%;
-    max-width: 590px;
+    max-width: 550px;
     position: relative;
     height: 500px;
     background-color: black;
@@ -99,10 +175,12 @@ h2{
 }
 h3{
     font-size: .8em;
-    margin-top: 10px;
-    
+    margin-top: 10px;   
 }
 
+h1, h2, h3{
+    color: #fff;
+}
 textarea{
     width: 100%;
     height: 30px;
@@ -160,7 +238,6 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #252935;
     width: 260px;
     height: 100%;
     padding: 30px 15px;
@@ -168,7 +245,7 @@ label{
     top: 0;
     right: 0;
     box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
-    z-index: 10;
+    z-index: 5;
 }
 /* *****PANEL CAMBIOS - COLUMNA IMAGEN**** */
 .url-input{
@@ -190,7 +267,9 @@ label{
     margin-top: 10px;
     margin-left: 25%;
 }
-
+.restablecer:hover{
+    background-color: #9c70e2;
+}
 /* ***controles range estilado*** */
 
 .slidecontainer {
@@ -264,7 +343,7 @@ label{
     color: #fff;
     background-color: #41315f;
 }
-.panel-control-input:hover, .control-fuente:hover, .btn-aling button:hover{
+.panel-control-input:hover, .btn-aling button:hover{
     background-color: #191e2b;
 }
 /* +++++++++++++++input-color-botones-boostrap */

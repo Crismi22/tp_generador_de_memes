@@ -1,10 +1,22 @@
-// PRIMER INTENTO DE MODO OSCURO
+// *****************************************
+////             MODO OSCURO        ////
+const light = document.getElementById('button-modo-dark');
+const body = document.body;
 
-// const btnLight = document.getElementById('button-modo-dark')
-// btnLight.addEventListener('click', () =>{
-//     document.body.classList.toggle('.dark-dark');
-//     btnLight.classList.toggle('.modo-light')
-// })
+light.addEventListener('click',()=> {
+    const val = body.classList.toggle("modo-light")
+    localStorage.setItem('light',val)
+})
+
+
+// *****funcion para que al actualizar pagina siga con el modo elegido por el usuario*******
+const valor = localStorage.getItem("light")
+
+if (valor == "true") {
+    body.classList.add("modo-light")
+} else {
+    body.classList.remove("modo-light")
+}
 
 // *********************************
 // CAMBIO DE COLUMNA IMAGEN A COLUMNA TEXTO CON BOTONES NAV 
@@ -12,7 +24,6 @@
 
 const btnImg = document.getElementById('button-text-img');
 const btnText = document.getElementById('button-text-text');
-
 const panelImagen = document.getElementById('panel-imagen');
 const panelTexto = document.getElementById('panel-texto');
 

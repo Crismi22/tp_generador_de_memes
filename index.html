@@ -14,27 +14,26 @@
     <link rel="stylesheet" href="style.css">
     <title>Generador de Memes CB</title>
 </head>
-<body class="dark-dark modo-light">
+<body class="">
 <!-- HEADER -->
 <!-- ++++++++++++++++ -->
-    <header class="header dark-dark modo-light">
+    <header class="header">
         <h1>GENERADOR DE MEMES</h1>
         <nav class="conteiner-button">
-           <button class="button button-nav" id="button-text-img"><i class="fas fa-file-image button-icon-text"
-            aria-hidden="true"></i> IMAGEN </button>
-           <button class="button button-nav" id="button-text-text"><i class="fas fa-font button-icon-text"
-            aria-hidden="true"></i> TEXTO </button>
-           <button type="button" class="button-nav" id="button-modo-dark"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i> MODO OSCURO </button>
-           <button class="button button-nav" id="button-modo-light"><i class="far fa-lightbulb button-icon-text" aria-hidden="true"></i> MODO CLARO </button>
+           <button class="button button-nav" id="button-text-img"><i class="fas fa-file-image button-icon-text"></i> IMAGEN </button>
+           <button class="button button-nav" id="button-text-text"><i class="fas fa-font button-icon-text"></i> TEXTO </button>
+           <button type="button" class="button-nav" id="button-modo-dark"><i class="far fa-lightbulb button-icon-text"></i> MODO OSCURO </button>
+           <button class="button button-nav" id="button-modo-light"><i class="far fa-lightbulb button-icon-text"></i> MODO CLARO </button>
         </nav>
     </header>
 <!-- ****************************CONENEDOR GENERAL CENTRAL********** -->
-    <div class="contenedor-gral dark-dark">
+    <div class="contenedor-gral">
         <main class="contenedor-meme">
             <div class="caja-meme">
                
                 <p id="textoTop" class="text-superior">TOP TEXT</p>
                 <div src="" alt="" id="caja-imagen" aria-label="Imagen de meme"></div>
+                <!-- https://i.pinimg.com/originals/89/ca/30/89ca30b76dfaed261b637b2f5fbc0660.jpg -->
                 <p id="textoInf"
                 class="text-inferior">BOTTOM TEXT</p>
                
@@ -47,12 +46,12 @@
                     BOTON PARA OCULTAR PANEL
 ++++++++ -->
         <button class="panel-close-button" id="panel-close-button" aria-label="Cerrar panel">
-            <i class="fas fa-times" aria-hidden="true"></i>
+            <i class="fas fa-times"></i>
         </button>
 <!--                    boton cierre -->
-        <aside class="panel-cambios dark-dark modo-light id="panel">
+        <aside class="panel-cambios id="panel">
 <!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
-            <section class="panel-imagen columna-cambios modo-light" id="panel-imagen">
+            <section class="panel-imagen columna-cambios" id="panel-imagen">
                 <h2 class="titulo-secundario-panel">IMAGEN</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">URL</h3>
@@ -103,7 +102,7 @@
                 </div>
             </section>
 <!-- *****************PANEL DE CAMBIOS TEXTO********** -->
-            <section class="panel-texto columna-cambios modo-light" id="panel-texto">
+            <section class="panel-texto columna-cambios" id="panel-texto">
                 <h2 class="titulo-secundario-panel">TEXTO</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">TEXTO SUPERIOR</h3>
@@ -116,7 +115,7 @@
                     <div class="control-checkbox">
                         <input type="checkbox" id="not-button"><label for="not-button">Sin texto inferior</label>
                     </div>
-                    <!-- //++++TIPO DE FUENTE+++// -->
+<!--///////////  //++++TIPO DE FUENTE+++// -->
                     <div class="control">
                         <h3 class="titulo-items">FUENTE</h3>
                         <select name="Estilos fuente" class="fuente-select" id="elegir-fuente" aria-label="Estilos de fuente">
@@ -160,7 +159,7 @@
                         </div>
                     </div>
                     <div class="control-checkbox">
-                        <input type="checkbox" id="sin-fondo"><label for="sin-fondo"> Fondo
+                        <input type="checkbox" id="sin-fondo"><label for="sin-fondo">Fondo
                           transparente</label>
                     </div>
                 </div>
@@ -185,14 +184,11 @@
                         <option value="2">2</option>
                         <option value="2.5">2.5</option>
                     </select>
-
-                </div>
-                
-                
+                </div>  
             </section>
-
         </aside>
     </div>
+    <!-- ///Framework de bootstrap para botones contorno/// -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     <script src="./app.js"></script>
