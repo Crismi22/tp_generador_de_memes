@@ -12,13 +12,11 @@ HEADER
     color: #fff;
     text-align: center;
     padding: 10px;
+    transition: background-color .4s;
 }
-/* *********************************
+/* *******************************************************
             *CAMBIAR A MODO CLARO*
-************************** */
-#button-modo-light{
-    display: none;
-}
+***************************************************** */
 
 .modo-light{
    background-color: #9f4ae4;   
@@ -29,7 +27,7 @@ HEADER
 .modo-light h1, h2, h3{
     color: #41315f;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .modo-light .button-nav{
     background-color: #41315f;
@@ -124,18 +122,21 @@ CONTENEDOR CENTRAL - MEME
     background-color: black;
     display: flex;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 800;
 } 
 
 .text-superior{
-    height: 10%;
+    height: 15%;
     background-color: #fff;
     color: #000;
+    margin-bottom: 0;
+   
+    
     
 }
 .text-inferior{
-    height: 10%;
+    height: 15%;
     background-color: #fff;
     color: #000;
     margin-bottom: 0;
@@ -162,6 +163,9 @@ CONTENEDOR CENTRAL - MEME
 
 /* ********TITULOS DE COLUMNAS Y SECCIONES DE ESTILADOS***** */
 /*//////// ESTILADO POR ETIQUETA */
+body{
+    background-color: #191e2b;
+}
 h1{
     font-size: 1.8em;
     margin: 10px;
@@ -233,19 +237,19 @@ label{
     background-color: #252935;
     color: #fff;
     flex-direction: column;
-    width: 30%;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 260px;
+    width: 20%;
     height: 100%;
-    padding: 30px 15px;
+    padding: 20px 15px;
     overflow: auto;
     top: 0;
     right: 0;
     box-shadow: -10px 10px 100px 5px rgb(0 0 0 / 30%);
     z-index: 5;
+    transition: background-color .4s;
 }
 /* *****PANEL CAMBIOS - COLUMNA IMAGEN**** */
 .url-input{
@@ -362,6 +366,9 @@ label{
 .ocultar{
     display: none;
 }
+.transparente{
+    display: none;
+}
 
 .control-checkbox{
     font-size: .7em;
@@ -413,9 +420,7 @@ label{
     border-radius: 3px;
     cursor: pointer;
 }
-.oculto {
-    display: none;
-}
+
 
 /* ****fin de columna texto****** */
 

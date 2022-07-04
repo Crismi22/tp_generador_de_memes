@@ -20,23 +20,20 @@
     <header class="header">
         <h1>GENERADOR DE MEMES</h1>
         <nav class="conteiner-button">
-           <button class="button button-nav" id="button-text-img"><i class="fas fa-file-image button-icon-text"></i> IMAGEN </button>
-           <button class="button button-nav" id="button-text-text"><i class="fas fa-font button-icon-text"></i> TEXTO </button>
-           <button type="button" class="button-nav" id="button-modo-dark"><i class="far fa-lightbulb button-icon-text"></i> MODO OSCURO </button>
-           <button class="button button-nav" id="button-modo-light"><i class="far fa-lightbulb button-icon-text"></i> MODO CLARO </button>
+           <button class="button-nav" id="button-text-img"><i class="fas fa-file-image button-icon-text"></i> IMAGEN </button>
+           <button class="button-nav" id="button-text-text"><i class="fas fa-font button-icon-text"></i> TEXTO </button>
+           <button class="button-nav btnDark" id="button-modo-dark"><i class="far fa-lightbulb button-icon-text"></i> CAMBIAR TEMA </button>
         </nav>
     </header>
 <!-- ****************************CONENEDOR GENERAL CENTRAL********** -->
     <div class="contenedor-gral">
         <main class="contenedor-meme">
-            <div class="caja-meme">
-               
+            <div class="caja-meme" id="caja-meme">
                 <p id="textoTop" class="text-superior">TOP TEXT</p>
                 <div src="" alt="" id="caja-imagen" aria-label="Imagen de meme"></div>
                 <!-- https://i.pinimg.com/originals/89/ca/30/89ca30b76dfaed261b637b2f5fbc0660.jpg -->
                 <p id="textoInf"
-                class="text-inferior">BOTTOM TEXT</p>
-               
+                class="text-inferior">BOTTOM TEXT</p> 
             </div>
             <button type="button" class="button button-descarga" id="button-descarga"><i class="fas fa-download button-icon-text"
             aria-hidden="true"></i> Descargar Meme </button>
@@ -49,7 +46,7 @@
             <i class="fas fa-times"></i>
         </button>
 <!--                    boton cierre -->
-        <aside class="panel-cambios id="panel">
+        <aside class="panel-cambios ocultar id="panel">
 <!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
             <section class="panel-imagen columna-cambios" id="panel-imagen">
                 <h2 class="titulo-secundario-panel">IMAGEN</h2>
@@ -102,11 +99,11 @@
                 </div>
             </section>
 <!-- *****************PANEL DE CAMBIOS TEXTO********** -->
-            <section class="panel-texto columna-cambios" id="panel-texto">
+            <section class="panel-texto ocultar columna-cambios" id="panel-texto">
                 <h2 class="titulo-secundario-panel">TEXTO</h2>
                 <div class="controles-varios">
                     <h3 class="titulo-items">TEXTO SUPERIOR</h3>
-                    <textarea id="inputTop" aria-label="texto superior editable" name="texto superior" id="top-text">TOP TEXT</textarea>
+                    <textarea id="inputTop" aria-label="texto superior editable" name="texto superior">TOP TEXT</textarea>
                     <div class="control-checkbox">
                         <input type="checkbox" id="not-top"><label for="not-top">Sin texto superior</label>
                     </div>
@@ -118,10 +115,11 @@
 <!--///////////  //++++TIPO DE FUENTE+++// -->
                     <div class="control">
                         <h3 class="titulo-items">FUENTE</h3>
-                        <select name="Estilos fuente" class="fuente-select" id="elegir-fuente" aria-label="Estilos de fuente">
-                            <option value="Arial">Arial</option>
+                        <select name="Estilos fuente" class="fuente-select" onchange="cambioFuente (this);" id="elegir-fuente" aria-label="Estilos de fuente">
+                            <option value="Arial" selected="selected">Arial</option>
                             <option value="Arial Black">Arial Black</option>
                             <option value="American Typewriter">American Typewriter</option>
+                            <option value="fantasy">Fantasy</option>
                             <option value="Grenze Gotisch">Grenze Gotisch</option>
                             <option value="Comic Sans MS">Comic Sans MS</option>
                             <option value="Helvetica">Helvetica</option>
