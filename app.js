@@ -69,6 +69,7 @@ check2.addEventListener('click', () => {
     textoInf.classList.toggle('ocultar');
 })
 
+// no cumple la funcion deseada - corregir
 check3.addEventListener('click', () => {
     cajaMeme.classList.toggle('transparente');
 })
@@ -85,14 +86,30 @@ const cambioFuente = function (font) {
     document.getElementById('textoInf').style.fontFamily = font.value;
 }
 
-
-
-// ********************
+// *******************************************************************
 // TAMAÑO DE FUENTE
-// ************************
+// *******************************************************************
 
+const textSize = document.getElementById('text-size-input');
 
+textSize.addEventListener('input', (event) => {
+    const NumberFont = event.target.value;
+    textoTop.style.fontSize = `${NumberFont}px`;
+    textoInf.style.fontSize = `${NumberFont}px`;
+})
 
-// *****************************
+// ******************************************************************
 // ALINEACION DE TEXTO 
-// *****************************
+// *****************************************************************
+// const btnAlignLeft = document.getElementById('btn-text-align-left');
+// const btnAlignCenter = document.getElementById('btn-text-center-align');
+// const btnAlignRight = document.getElementById('btn-text-right-align');
+
+// btnAlignLeft.addEventListener('click', () => {
+//     textoTop.style.textAlign = "left";
+// })
+// Left(){
+//     const btnAlignLeft = document.getElementById('textoTop');
+//         btnAlignLeft.style.textAlign = "left";
+//     )}
+

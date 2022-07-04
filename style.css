@@ -117,7 +117,6 @@ CONTENEDOR CENTRAL - MEME
     margin-top: 10px;
     width: 100%;
     max-width: 550px;
-    position: relative;
     height: 500px;
     background-color: black;
     display: flex;
@@ -130,11 +129,10 @@ CONTENEDOR CENTRAL - MEME
     height: 15%;
     background-color: #fff;
     color: #000;
-    margin-bottom: 0;
-   
-    
+    margin-bottom: 0;   
     
 }
+
 .text-inferior{
     height: 15%;
     background-color: #fff;
