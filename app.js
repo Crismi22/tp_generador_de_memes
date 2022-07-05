@@ -39,6 +39,78 @@ btnText.addEventListener('click',() => {
 })
 
 // *******************************************************
+//+++++PANEL DE FILTROS EN LA IMAGEN////
+// *******************************************************
+
+const brillo = document.getElementById('brillo');
+const opacidad = document.getElementById('opacidad');
+const contraste = document.getElementById('contraste');
+const desenfoque = document.getElementById('desenfoque');
+const gray = document.getElementById('gray-scale');
+const sepia = document.getElementById('sepia');
+const hue = document.getElementById('hue');
+const saturacion = document.getElementById('saturacion');
+const negativo = document.getElementById('negativo');
+const imagen = document.getElementById('caja-imagen');
+
+const filtros = () => {
+    imagen.style.filter = `brightness(${brillo.value})`;
+}
+brillo.addEventListener('click', filtros); 
+
+const restablecer = (e) => {
+    e.preventDefault()
+    imagen.style.filter = `brightness(1)`;
+    console.log('funciona')
+}
+
+opacidad.addEventListener('click', (event) => {
+    const valorOpacidad = event.target.value
+    cajaImg.style.filter = `opacity(${valorOpacidad})`;
+})
+contraste.addEventListener('click',(event) => {
+    const valorContraste = event.target.value
+    cajaImg.style.filter = `contrast(${valorContraste})`;
+})
+desenfoque.addEventListener('click', (event) => {
+    const valorDesenfoque = event.target.value
+    cajaImg.style.filter = `blur(${valorDesenfoque})`;
+})
+gray.addEventListener('click', (event) => {
+    const valorGray = event.target.value
+    cajaImg.style.filter = `grayscale(${valorGray})`;
+})
+sepia.addEventListener('click', (event) => {
+    const valorSepia = event.target.value
+    cajaImg.style.filter = `sepia(${valorSepia})`;
+})
+hue.addEventListener('click', (event) => {
+    const valorHue = event.target.value
+    cajaImg.style.filter = `hue-rotate(${valorHue})`;
+})
+saturacion.addEventListener('click', (event) => {
+    const valorSaturacion = event.target.value
+    cajaImg.style.filter = `saturate(${valorSaturacion})`;
+})
+negativo.addEventListener('click', (event) => {
+    const valorNegativo = event.target.value
+    cajaImg.style.filter = `invert(${valorNegativo})`;
+})
+
+
+/***************BOTON RESTABLECER FILTROS**************/
+const btnRestablecer = document.getElementById('btnRestablecer');
+btnRestablecer.addEventListener('click',(e) =>{restablecer(e)});
+/*****************************************************************/
+
+
+
+
+
+
+
+
+// *******************************************************
 //+++++PARTE INPUT TEXTO CAJA MEME | CHECKBOX CAJA MEME////
 // *******************************************************
 
