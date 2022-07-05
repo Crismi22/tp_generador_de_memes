@@ -53,52 +53,83 @@ const saturacion = document.getElementById('saturacion');
 const negativo = document.getElementById('negativo');
 const imagen = document.getElementById('caja-imagen');
 
-const filtros = () => {
-    imagen.style.filter = `brightness(${brillo.value})`;
-}
-brillo.addEventListener('click', filtros); 
 
-const restablecer = (e) => {
-    e.preventDefault()
-    imagen.style.filter = `brightness(1)`;
-    console.log('funciona')
-}
+// //se implementaron lineas de codigo de esta manera pero no realizan ninguna accion//
+// const filtros = () => {
+//     imagen.style.filter = `brightness(${brillo.value})`;
+//     imagen.style.filter = `opacity(${opacidad.value})`;
+//     imagen.style.filter = `contrast(${contraste.value}%)`;
+//     imagen.style.filter = `blur(${desenfoque.value}px)`;
+//     imagen.style.filter = `grayscale(${gray.value}%)`;
+//     imagen.style.filter = `sepia(${sepia.value}%)`;
+//     imagen.style.filter = `hue-rotate(${hue.value}deg)`;
+//     imagen.style.filter = `saturate(${saturacion.value}%)`;
+//     imagen.style.filter = `invert(${negativo.value})`;
+// }
 
-opacidad.addEventListener('click', (event) => {
+
+// brillo.addEventListener('click', filtros); 
+// opacidad.addEventListener('click', filtros);
+// contraste.addEventListener('click', filtros);
+// desenfoque.addEventListener('click',filtros);
+// gray.addEventListener('click', filtros);
+// sepia.addEventListener('click', filtros);
+// hue.addEventListener('click', filtros);
+// saturacion.addEventListener('click', filtros);
+// negativo.addEventListener('click', filtros);
+
+
+brillo.addEventListener('click',(event) => {
+    const valorBrillo = event.target.value
+    imagen.style.filter = `brightness(${valorBrillo})`;
+})
+opacidad.addEventListener('click',(event) => {
     const valorOpacidad = event.target.value
-    cajaImg.style.filter = `opacity(${valorOpacidad})`;
+    imagen.style.filter = `opacity(${valorOpacidad})`;
 })
 contraste.addEventListener('click',(event) => {
     const valorContraste = event.target.value
-    cajaImg.style.filter = `contrast(${valorContraste})`;
+    imagen.style.filter = `contrast(${valorContraste}%)`;
 })
 desenfoque.addEventListener('click', (event) => {
     const valorDesenfoque = event.target.value
-    cajaImg.style.filter = `blur(${valorDesenfoque})`;
+    imagen.style.filter = `blur(${valorDesenfoque}px)`;
 })
 gray.addEventListener('click', (event) => {
     const valorGray = event.target.value
-    cajaImg.style.filter = `grayscale(${valorGray})`;
+    imagen.style.filter = `grayscale(${valorGray}%)`;
 })
 sepia.addEventListener('click', (event) => {
     const valorSepia = event.target.value
-    cajaImg.style.filter = `sepia(${valorSepia})`;
+    imagen.style.filter = `sepia(${valorSepia}%)`;
 })
 hue.addEventListener('click', (event) => {
     const valorHue = event.target.value
-    cajaImg.style.filter = `hue-rotate(${valorHue})`;
+    imagen.style.filter = `hue-rotate(${valorHue}deg)`;
 })
 saturacion.addEventListener('click', (event) => {
     const valorSaturacion = event.target.value
-    cajaImg.style.filter = `saturate(${valorSaturacion})`;
+    imagen.style.filter = `saturate(${valorSaturacion}%)`;
 })
 negativo.addEventListener('click', (event) => {
     const valorNegativo = event.target.value
-    cajaImg.style.filter = `invert(${valorNegativo})`;
+    imagen.style.filter = `invert(${valorNegativo})`;
 })
 
 
 /***************BOTON RESTABLECER FILTROS**************/
+const restablecer = (e) => {
+    e.preventDefault()
+    imagen.style.filter = `brightness(1)`;
+    imagen.style.filter = `opacity(1)`;
+    imagen.style.filter = `contrast(100)`;
+    imagen.style.filter = `blur(0)`;
+    imagen.style.filter = `grayscale(0)`;
+    imagen.style.filter = `sepia(0)`;
+    imagen.style.filter = `saturate(0)`;
+    imagen.style.filter = `saturate(100)`;
+    imagen.style.filter = `invert(0)`;
+}
 const btnRestablecer = document.getElementById('btnRestablecer');
 btnRestablecer.addEventListener('click',(e) =>{restablecer(e)});
 /*****************************************************************/

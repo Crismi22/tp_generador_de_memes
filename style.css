@@ -12,7 +12,7 @@ HEADER
     color: #fff;
     text-align: center;
     padding: 10px;
-    transition: background-color .4s;
+    transition: background-color .3s;
 }
 /* *******************************************************
             *CAMBIAR A MODO CLARO*
@@ -103,7 +103,6 @@ CONTENEDOR CENTRAL - MEME
 .contenedor-gral{
     background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg');
     background-size:contain;
- 
 }
 
 .contenedor-meme{
