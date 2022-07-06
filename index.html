@@ -30,12 +30,13 @@
         <main class="contenedor-meme">
             <div class="caja-meme" id="caja-meme">
                 <p id="textoTop" class="text-superior">TOP TEXT</p>
-                <div src="" alt="" id="caja-imagen"
+                <div id="caja-imagen"
                 aria-label="Imagen de meme">
                 </div>
                 <p id="textoInf"
                 class="text-inferior">BOTTOM TEXT</p> 
             </div>
+            <!-- caja-meme para el boton descarga -->
             <button type="button" class="button button-descarga" id="button-descarga"><i class="fas fa-download button-icon-text"
             aria-hidden="true"></i> Descargar Meme </button>
         </main>
@@ -47,7 +48,7 @@
             <i class="fas fa-times"></i>
         </button>
 <!--                    boton cierre -->
-        <aside class="panel-cambios ocultar id="panel">
+        <aside class="panel-cambios ocultar" id="panel">
 <!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
             <section class="panel-imagen columna-cambios" id="panel-imagen">
                 <h2 class="titulo-secundario-panel">IMAGEN</h2>
@@ -62,7 +63,7 @@
                             <span id="texto-color">#000000</span>
                         </div>
                         
-                        <select id="estilado" aria-label="mezcla de fondo de imagen">
+                        <select id="estilado" class="estilado" aria-label="mezcla de fondo de imagen">
                             <option value="ninguno">Ninguno</option>
                             <option value="aclarar">Aclarar</option>
                             <option value="oscurecer">Oscurecer</option>
@@ -131,7 +132,7 @@
                         </select>
                     </div>
                     <div class="control-fuente">
-                        <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente" class="panel-control-input" id="text-size-input" min="12"
+                        <input type="number" name="Tamaño de fuente" aria-label="Tamaño de fuente" class="panel-control-input" id="text-size-input" min="12" max="70"
                         value="40">
                         <div class="btn-aling">
                             <button id="btn-text-left-align"

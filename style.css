@@ -4,16 +4,6 @@
     box-sizing: border-box;
 }
 
-/* +++++++++++++++++++
-HEADER
-+++++++++++++++++++ */
-.header{
-    background-color: #191e2b;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    transition: background-color .3s;
-}
 /* *******************************************************
             *CAMBIAR A MODO CLARO*
 ***************************************************** */
@@ -96,9 +86,34 @@ HEADER
     color:#fff;
 }
 
-/* +++++++++++++++++++
-CONTENEDOR CENTRAL - MEME
-+++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++
+            HEADER
+++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.header{
+    background-color: #191e2b;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: background-color .3s;
+}
+
+.button-nav{
+    font-size: .8em;
+    border-radius: 10%;
+    background-color:#191e2b;
+    color: #fff;
+    border-style: none;
+    padding: 5px;
+    
+}
+
+.button-nav:hover{
+    background-color: #41315f;
+    padding: 5px;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++
+            CONTENEDOR CENTRAL - MEME
++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .contenedor-gral{
     background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg');
@@ -117,25 +132,23 @@ CONTENEDOR CENTRAL - MEME
     width: 100%;
     max-width: 550px;
     height: 500px;
-    /* background-color: black; */
     display: flex;
     flex-direction: column;
     font-size: 40px;
     font-weight: 800;
-
-   
+    background-size:contain;
+    background-color: #000; 
 } 
 
 .text-superior{
-    height: 15%;
+    padding: 15px;
     background-color: #fff;
     color: #000;
-    margin-bottom: 0;   
-    
+    margin-bottom: 0;     
 }
 
 .text-inferior{
-    height: 15%;
+    padding: 15px;
     background-color: #fff;
     color: #000;
     margin-bottom: 0;
@@ -144,10 +157,10 @@ CONTENEDOR CENTRAL - MEME
 #caja-imagen{
     width: 100%;
     flex-grow: 1;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    background-image: url('https://i.pinimg.com/originals/89/ca/30/89ca30b76dfaed261b637b2f5fbc0660.jpg');
-    background-size: cover;
 }
 
 .button-descarga{
@@ -162,30 +175,30 @@ CONTENEDOR CENTRAL - MEME
     background-color: #574479;
 }
 
-/* ********TITULOS DE COLUMNAS Y SECCIONES DE ESTILADOS***** */
-/*//////// ESTILADO POR ETIQUETA */
+
+/*//////// ESTILADO POR ETIQUETA/////////////////*/
 body{
     background-color: #191e2b;
 }
 h1{
     font-size: 1.8em;
     margin: 10px;
+    color: #fff;
 }
 h2{
     font-size: 1.3em;
     text-align: center;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 15px;    
+    margin-bottom: 15px;
+    color: #fff;   
 }
 h3{
     font-size: .8em;
-    margin-top: 10px;   
+    margin-top: 10px;  
+    color: #fff; 
 }
 
-h1, h2, h3{
-    color: #fff;
-}
 textarea{
     width: 100%;
     height: 30px;
@@ -215,24 +228,9 @@ label{
     font-size: 12px;
 } 
 
-/* ****ENCABEZADO*****
-****************** */
-
-.button-nav{
-    font-size: .8em;
-    border-radius: 10%;
-    background-color:#191e2b;
-    color: #fff;
-    border-style: none;
-    padding: 5px;
-    
-}
-
-.button-nav:hover{
-    background-color: #41315f;
-    padding: 5px;
-}
-/* ******COLUMNA DE CAMBIOS DE ESTILOS******** */
+/* ************************************************
+            COLUMNA DE CAMBIOS DE ESTILOS
+************************************************** */
 
 .columna-cambios{
     background-color: #252935;
@@ -240,7 +238,6 @@ label{
     flex-direction: column;
     position: fixed;
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     width: 20%;
     height: 100%;
@@ -252,30 +249,20 @@ label{
     z-index: 5;
     transition: background-color .4s;
 }
-/* *****PANEL CAMBIOS - COLUMNA IMAGEN**** */
+/* ****************************************************
+            PANEL CAMBIOS - COLUMNA IMAGEN
+*************************************************** */
 .url-input{
     width: 100%;
     background-color:#574479;
 }
-
 .fondo-div{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.restablecer{
-    background-color: #574479;
-    font-size: .8em;
-    color: #fff;
-    padding: 5px;
-    border: #574479;
-    margin-top: 10px;
-    margin-left: 25%;
-}
-.restablecer:hover{
-    background-color: #9c70e2;
-}
-/* ***controles range estilado*** */
+
+/****INPUT RANGE: ESTILADO*** */
 
 .slidecontainer {
     width: 100%;
@@ -321,8 +308,24 @@ label{
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* *****PANEL CAMBIOS - COLUMNA TEXTO**** */
+/* ******************************************
+            BOTON RESTABLECER FILTROS
+****************************************** */
+.restablecer{
+    background-color: #574479;
+    font-size: .8em;
+    color: #fff;
+    padding: 5px;
+    border: #574479;
+    margin-top: 10px;
+    margin-left: 25%;
+}
+.restablecer:hover{
+    background-color: #9c70e2;
+}
+/* ****************************************************
+            PANEL CAMBIOS - COLUMNA TEXTO
+*************************************************** */
 
 .control-input, .fuente-select{
     width: 100%;
@@ -367,9 +370,9 @@ label{
 .ocultar{
     display: none;
 }
-.transparente{
+/* .transparente{
     display: none;
-}
+} */
 
 .control-checkbox{
     font-size: .7em;
@@ -381,7 +384,8 @@ label{
 }
 
 .color-texto,.btn-color{
-    display: flex;   
+    display: flex; 
+    justify-content: space-around;  
 }
 .btn-color{
     padding: 5px;
@@ -392,6 +396,7 @@ label{
 .btn-color:hover{
     background-color: #252935;
 }
+/* ++++++ ESTILADO DE INPUT TYPE COLOR ++++++++++++ */
 .incolor{
     width: 50%;
     margin-top: 10px;
@@ -413,22 +418,15 @@ label{
 #style2::-moz-color-swatch {
     border-radius: 50%;
 }
-/* boton cierre panel */
-.panel-close-button {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
+/* +++++fin de estilado+++++++++ */
 
 /* ****fin de columna texto****** */
 
-  /* 
-    ********REPONSIVE************
-    ***********************************
-  */
+/* 
+    ******************************************
+                REPONSIVE
+    ******************************************
+*/
   
 @media (min-width: 1300px) {
     .panel-cambios {
@@ -444,10 +442,56 @@ label{
     h1{
       font-size: 26px;
     }
+    .columna-cambios{
+        position: relative;
+        width: 100%;
+        
+    }
     .panel-cambios{
       width: 100%;
+      display: block;
+    }
+    .contenedor-gral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .contenedor-meme{
+        width: 100%;
+        align-content: center;
+    }
+    .caja-meme{
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .panel-close-button{
+        display: none;
+    }
+    .fondo-div{
+        width: 100%;
+    }
+    .btn-color, .estilado{
+        width: 50%;
+    }
+    .btn-aling{
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-aling button{
+        width: 60px;
+        height: 30px;
+    }
+    .color-texto div, .btn-color{
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-group{
+        display: flex;
+        position: relative;
     }
 }
+
+
 
 
 

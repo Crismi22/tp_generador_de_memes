@@ -37,11 +37,20 @@ btnText.addEventListener('click',() => {
     panelTexto.style.display = "block";
     panelImagen.style.display = "none";
 })
+// **********************************
+// URL INPUT
+// **********************************
+
+const urlImg = document.getElementById('url-img');
+urlImg.addEventListener('input', () => {
+  imagen.style = `background-image: url(${urlImg.value})`;
+});
+
 
 // *******************************************************
 //+++++PANEL DE FILTROS EN LA IMAGEN////
 // *******************************************************
-
+const imagen = document.getElementById('caja-imagen');
 const brillo = document.getElementById('brillo');
 const opacidad = document.getElementById('opacidad');
 const contraste = document.getElementById('contraste');
@@ -51,7 +60,6 @@ const sepia = document.getElementById('sepia');
 const hue = document.getElementById('hue');
 const saturacion = document.getElementById('saturacion');
 const negativo = document.getElementById('negativo');
-const imagen = document.getElementById('caja-imagen');
 
 
 // //se implementaron lineas de codigo de esta manera pero no realizan ninguna accion//
