@@ -12,7 +12,7 @@ light.addEventListener('click',()=> {
     localStorage.setItem('light',val)
 })
 
-// *****funcion para que al actualizar pagina siga con el modo elegido por el usuario*******
+// *****funcion para que al actualizar página siga con el modo elegido por el usuario*******
 if (valor == "true") {
     body.classList.add("modo-light")
 } else {
@@ -22,7 +22,9 @@ if (valor == "true") {
 // ********************************************************
 // CAMBIO DE COLUMNA IMAGEN A COLUMNA TEXTO CON BOTONES NAV 
 // ********************************************************
-
+// const panel = document.getElementById('panel');
+// const btnPanelCierre = document.getElementById('panel-close-button');
+// revisar btn funcion para cerrar panel desde responsive
 const btnImg = document.getElementById('button-text-img');
 const btnText = document.getElementById('button-text-text');
 const panelImagen = document.getElementById('panel-imagen');
@@ -37,8 +39,17 @@ btnText.addEventListener('click',() => {
     panelTexto.style.display = "block";
     panelImagen.style.display = "none";
 })
+
+
+
+// btnPanelCierre.addEventListener('click', () =>{
+//     panelImagen.classList.toggle('ocultar');
+//     panelTexto.classList.toggle('ocultar');
+// })
+
+
 // **********************************
-// URL INPUT
+//         URL INPUT
 // **********************************
 
 const urlImg = document.getElementById('url-img');
@@ -61,69 +72,19 @@ const hue = document.getElementById('hue');
 const saturacion = document.getElementById('saturacion');
 const negativo = document.getElementById('negativo');
 
+const filtros = () => {
+     imagen.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${gray.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturacion.value}%) invert(${negativo.value})`;
+}
 
-// //se implementaron lineas de codigo de esta manera pero no realizan ninguna accion//
-// const filtros = () => {
-//     imagen.style.filter = `brightness(${brillo.value})`;
-//     imagen.style.filter = `opacity(${opacidad.value})`;
-//     imagen.style.filter = `contrast(${contraste.value}%)`;
-//     imagen.style.filter = `blur(${desenfoque.value}px)`;
-//     imagen.style.filter = `grayscale(${gray.value}%)`;
-//     imagen.style.filter = `sepia(${sepia.value}%)`;
-//     imagen.style.filter = `hue-rotate(${hue.value}deg)`;
-//     imagen.style.filter = `saturate(${saturacion.value}%)`;
-//     imagen.style.filter = `invert(${negativo.value})`;
-// }
-
-
-// brillo.addEventListener('click', filtros); 
-// opacidad.addEventListener('click', filtros);
-// contraste.addEventListener('click', filtros);
-// desenfoque.addEventListener('click',filtros);
-// gray.addEventListener('click', filtros);
-// sepia.addEventListener('click', filtros);
-// hue.addEventListener('click', filtros);
-// saturacion.addEventListener('click', filtros);
-// negativo.addEventListener('click', filtros);
-
-
-brillo.addEventListener('click',(event) => {
-    const valorBrillo = event.target.value
-    imagen.style.filter = `brightness(${valorBrillo})`;
-})
-opacidad.addEventListener('click',(event) => {
-    const valorOpacidad = event.target.value
-    imagen.style.filter = `opacity(${valorOpacidad})`;
-})
-contraste.addEventListener('click',(event) => {
-    const valorContraste = event.target.value
-    imagen.style.filter = `contrast(${valorContraste}%)`;
-})
-desenfoque.addEventListener('click', (event) => {
-    const valorDesenfoque = event.target.value
-    imagen.style.filter = `blur(${valorDesenfoque}px)`;
-})
-gray.addEventListener('click', (event) => {
-    const valorGray = event.target.value
-    imagen.style.filter = `grayscale(${valorGray}%)`;
-})
-sepia.addEventListener('click', (event) => {
-    const valorSepia = event.target.value
-    imagen.style.filter = `sepia(${valorSepia}%)`;
-})
-hue.addEventListener('click', (event) => {
-    const valorHue = event.target.value
-    imagen.style.filter = `hue-rotate(${valorHue}deg)`;
-})
-saturacion.addEventListener('click', (event) => {
-    const valorSaturacion = event.target.value
-    imagen.style.filter = `saturate(${valorSaturacion}%)`;
-})
-negativo.addEventListener('click', (event) => {
-    const valorNegativo = event.target.value
-    imagen.style.filter = `invert(${valorNegativo})`;
-})
-
+ brillo.addEventListener('click', filtros); 
+ opacidad.addEventListener('click', filtros);
+ contraste.addEventListener('click', filtros);
+ desenfoque.addEventListener('click',filtros);
+ gray.addEventListener('click', filtros);
+ sepia.addEventListener('click', filtros);
+ hue.addEventListener('click', filtros);
+ saturacion.addEventListener('click', filtros);
+ negativo.addEventListener('click', filtros);
 
 /***************BOTON RESTABLECER FILTROS**************/
 const restablecer = (e) => {
@@ -137,7 +98,17 @@ const restablecer = (e) => {
     imagen.style.filter = `saturate(0)`;
     imagen.style.filter = `saturate(100)`;
     imagen.style.filter = `invert(0)`;
+    brillo.value = 1;
+    opacidad.value = 1;
+    contraste.value = 100;
+    desenfoque.value = 0;
+    gray.value = 0;
+    sepia.value = 0;
+    hue.value = 0;
+    saturacion.value = 100;
+    negativo.value = 0;
 }
+
 const btnRestablecer = document.getElementById('btnRestablecer');
 btnRestablecer.addEventListener('click',(e) =>{restablecer(e)});
 /*****************************************************************/

@@ -111,6 +111,7 @@
     background-color: #41315f;
     padding: 5px;
 }
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++
             CONTENEDOR CENTRAL - MEME
 +++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -422,30 +423,71 @@ label{
 
 /* ****fin de columna texto****** */
 
+/* +++++++++++
+    BOTON PARA CERRAR PANEL (RESPONSIVE)
+++++++++++ */
+.panel-close-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #9c70e2;
+    background-color: #393e49;
+    position: fixed;
+    top:15px;
+    right: 15px;
+    display: none;
+  
+
+}
+
 /* 
     ******************************************
                 REPONSIVE
     ******************************************
-*/
+/* */
   
-@media (min-width: 1300px) {
-    .panel-cambios {
-      display: block;
-      box-shadow: none;
+ @media (min-width: 769px) and (max-width: 1023px) {
+    .panel-cambios{
+        width: 25%;
+        display:block;
+    }
+    .columna-cambios{
+        position: initial;
+        width: auto;
+    }
+    .fondo-div{
+        flex-wrap: wrap;
+    }
+    .btn-aling{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .color-texto div, .btn-color{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .btn-group{
+        display: inline-flex;
+        flex-wrap: wrap;
     }
     .panel-close-button {
-      display: none;
+      display: block;
     }
-}
-  
-@media (max-width: 700px) {
+
+}  
+
+@media (max-width: 768px) {
     h1{
       font-size: 26px;
     }
     .columna-cambios{
         position: relative;
-        width: 100%;
-        
+        width: 100%;  
     }
     .panel-cambios{
       width: 100%;
@@ -490,9 +532,3 @@ label{
         position: relative;
     }
 }
-
-
-
-
-
-
