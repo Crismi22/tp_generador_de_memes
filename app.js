@@ -89,8 +89,7 @@ const filtros = () => {
 /***************BOTON RESTABLECER FILTROS**************/
 const restablecer = (e) => {
     e.preventDefault()
-    imagen.style.filter = `brightness(1)`;
-    imagen.style.filter = `opacity(1)`;
+    imagen.style.filter = `brightness(1) opacity(1)`;
     imagen.style.filter = `contrast(100)`;
     imagen.style.filter = `blur(0)`;
     imagen.style.filter = `grayscale(0)`;
@@ -107,7 +106,7 @@ const restablecer = (e) => {
     hue.value = 0;
     saturacion.value = 100;
     negativo.value = 0;
-}
+};
 
 const btnRestablecer = document.getElementById('btnRestablecer');
 btnRestablecer.addEventListener('click',(e) =>{restablecer(e)});
@@ -194,4 +193,10 @@ textSize.addEventListener('input', (event) => {
 //     const btnAlignLeft = document.getElementById('textoTop');
 //         btnAlignLeft.style.textAlign = "left";
 //     )}
+// ******************************************************************
+//                  BOTON DESCARGA MEME 
+// *****************************************************************
+const btnDescarga = document.getElementById('button-descarga');
 
+btnDescarga.addEventListener('click', () =>
+  domtoimage.toBlob(document.getElementById('caja-meme')).then(blob => saveAs(blob, 'mi-meme.png')));
