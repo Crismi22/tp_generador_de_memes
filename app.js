@@ -57,10 +57,24 @@ urlImg.addEventListener('input', () => {
   imagen.style = `background-image: url(${urlImg.value})`;
 });
 
+// ***************************
+// COLOR DE FONDO DE IMAGEN 
+// **************************
+
+const actualizarColorMezcla = (evento) => {
+  $('btn-color-imagen').innerText = evento.target.value.toUpperCase()
+  $('caja-imagen').style.backgroundColor = evento.target.value
+}
+
+const actualizarTipoMezcla = (evento) => {
+  $('caja-imagen').style.backgroundBlendMode = evento.target.value
+}
+
 
 // *******************************************************
 //+++++PANEL DE FILTROS EN LA IMAGEN////
 // *******************************************************
+
 const imagen = document.getElementById('caja-imagen');
 const brillo = document.getElementById('brillo');
 const opacidad = document.getElementById('opacidad');
@@ -142,17 +156,15 @@ inputBut.addEventListener('input', (event) => {
     textoInf.innerHTML = textoIngresado2;
 })
 
-
 check1.addEventListener('click', () => {
     textoTop.classList.toggle('ocultar');
 }) 
 check2.addEventListener('click', () => {
     textoInf.classList.toggle('ocultar');
 })
-
-// no cumple la funcion deseada - corregir
 check3.addEventListener('click', () => {
-    cajaMeme.classList.toggle('transparente');
+    textoTop.classList.toggle('transparente');
+    textoInf.classList.toggle('transparente')
 })
 
 
@@ -182,18 +194,24 @@ textSize.addEventListener('input', (event) => {
 // ******************************************************************
 // ALINEACION DE TEXTO 
 // *****************************************************************
-// const btnAlignLeft = document.getElementById('btn-text-align-left');
-// const btnAlignCenter = document.getElementById('btn-text-center-align');
-// const btnAlignRight = document.getElementById('btn-text-right-align');
+const btnAlignLeft = document.getElementById('btn-text-left-align');
+const btnAlignCenter = document.getElementById('btn-text-center-align');
+const btnAlignRight = document.getElementById('btn-text-right-align');
 
-// btnAlignLeft.addEventListener('click', () => {
-//     textoTop.style.textAlign = "left";
-// })
-// Left(){
-//     const btnAlignLeft = document.getElementById('textoTop');
-//         btnAlignLeft.style.textAlign = "left";
-//     )}
-// ******************************************************************
+btnAlignLeft.addEventListener('click', () => {
+    textoTop.style.textAlign = "left";
+    textoInf.style.textAlign = "left";
+});
+btnAlignCenter.addEventListener('click', () => {
+    textoTop.style.textAlign = "center";
+    textoInf.style.textAlign = "center";
+});
+btnAlignRight.addEventListener('click', () => {
+    textoTop.style.textAlign = "right";
+    textoInf.style.textAlign = "right";
+});
+
+//*****************************************************************
 //                  BOTON DESCARGA MEME 
 // *****************************************************************
 const btnDescarga = document.getElementById('button-descarga');

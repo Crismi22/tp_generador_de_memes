@@ -371,9 +371,9 @@ label{
 .ocultar{
     display: none;
 }
-/* .transparente{
-    display: none;
-} */
+.transparente{
+    background-color: transparent !important;
+} 
 
 .control-checkbox{
     font-size: .7em;
@@ -460,7 +460,7 @@ label{
     top:15px;
     right: 15px;
     display: none;
-  
+ 
 
 }
 
