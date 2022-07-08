@@ -19,6 +19,14 @@ if (valor == "true") {
     body.classList.remove("modo-light")
 }
 
+//*****************************************************************
+//                  BOTON DESCARGA MEME 
+// *****************************************************************
+const btnDescarga = document.getElementById('button-descarga');
+
+btnDescarga.addEventListener('click', () =>
+  domtoimage.toBlob(document.getElementById('caja-meme')).then(blob => saveAs(blob, 'mi-meme.png')));
+
 // ********************************************************
 // CAMBIO DE COLUMNA IMAGEN A COLUMNA TEXTO CON BOTONES NAV 
 // ********************************************************
@@ -60,15 +68,28 @@ urlImg.addEventListener('input', () => {
 // ***************************
 // COLOR DE FONDO DE IMAGEN 
 // **************************
+const contenedora = document.getElementById('caja-meme');
+const fondoColorImg = document.getElementById('incolor');
+const colorValor = document.getElementById('imagen-color');
+const mezcla = document.getElementById('mezcla');
 
-const actualizarColorMezcla = (evento) => {
-  $('btn-color-imagen').innerText = evento.target.value.toUpperCase()
-  $('caja-imagen').style.backgroundColor = evento.target.value
-}
 
-const actualizarTipoMezcla = (evento) => {
-  $('caja-imagen').style.backgroundBlendMode = evento.target.value
-}
+
+fondoColorImg.addEventListener('input', (event) =>{
+    const color = event.target.value;
+    contenedora.style.background = color;
+    colorValor.innerHTML = `${color}`;
+})
+// ***revisar**
+// mezcla.addEventListener('change', (event) =>{
+//     const mexcla = event.target.value;
+//     imagen.style.backgroundBlendMode = mexcla;   
+// });
+
+
+// **********************************
+//          CAMBIOS SELECT IMAGEN
+// **********************************
 
 
 // *******************************************************
@@ -103,7 +124,8 @@ const filtros = () => {
 /***************BOTON RESTABLECER FILTROS**************/
 const restablecer = (e) => {
     e.preventDefault()
-    imagen.style.filter = `brightness(1) opacity(1)`;
+    imagen.style.filter = `brightness(1)`;
+    imagen.style.filter = `opacity(1)`;
     imagen.style.filter = `contrast(100)`;
     imagen.style.filter = `blur(0)`;
     imagen.style.filter = `grayscale(0)`;
@@ -167,11 +189,8 @@ check3.addEventListener('click', () => {
     textoInf.classList.toggle('transparente')
 })
 
-
-// DALE KRIS!! VOS PODES CON ESTO! SOS INTELIGENTE, SOS CAPAZ Y TE LO MERECES PARA SEGUIR AVANZANDO Y CRECIENDO. FALTA CADA VEZ MENOS PARA EL FUTURO QUE ESTAS ESPERANDO FELIZ
-
 // *******************************************************************
-// CAMBIO TIPO DE FUENTE
+//      CAMBIO TIPO DE FUENTE
 // *******************************************************************
 
 const cambioFuente = function (font) {
@@ -180,7 +199,7 @@ const cambioFuente = function (font) {
 }
 
 // *******************************************************************
-// TAMAÑO DE FUENTE
+//      TAMAÑO DE FUENTE
 // *******************************************************************
 
 const textSize = document.getElementById('text-size-input');
@@ -192,7 +211,7 @@ textSize.addEventListener('input', (event) => {
 })
 
 // ******************************************************************
-// ALINEACION DE TEXTO 
+//      ALINEACION DE TEXTO 
 // *****************************************************************
 const btnAlignLeft = document.getElementById('btn-text-left-align');
 const btnAlignCenter = document.getElementById('btn-text-center-align');
@@ -211,10 +230,35 @@ btnAlignRight.addEventListener('click', () => {
     textoInf.style.textAlign = "right";
 });
 
-//*****************************************************************
-//                  BOTON DESCARGA MEME 
-// *****************************************************************
-const btnDescarga = document.getElementById('button-descarga');
+// **************************************************
+//      COLOR DE TEXTO Y FONDO
+// *************************************************
 
-btnDescarga.addEventListener('click', () =>
-  domtoimage.toBlob(document.getElementById('caja-meme')).then(blob => saveAs(blob, 'mi-meme.png')));
+const colorTexto = document.getElementById('incolor2');
+const colorFondoTexto = document.getElementById('incolor3');
+
+colorTexto.addEventListener('input', (event) => {
+    const colorT = event.target.value;
+    textoTop.style.color = `${colorT}`;
+    textoInf.style.color = `${colorT}`;
+})
+
+colorFondoTexto.addEventListener('input', (event) => {
+    const colorF = event.target.value;
+    textoTop.style.background = `${colorF}`;
+    textoInf.style.background = `${colorF}`;
+})
+
+// ***********************************************************
+//      CONTORNO 
+// ***********************************************************
+
+
+
+
+
+
+
+
+
+// DALE KRIS!! VOS PODES CON ESTO! SOS INTELIGENTE, SOS CAPAZ Y TE LO MERECES PARA SEGUIR AVANZANDO Y CRECIENDO. FALTA CADA VEZ MENOS PARA EL FUTURO QUE ESTAS ESPERANDO FELIZ********
