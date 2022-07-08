@@ -22,7 +22,7 @@
 .modo-light .button-nav{
     background-color: #41315f;
 }
-.modo-light .contenedor-gral{
+.modo-light body{
     background-image: url('/tp-generador-de-memes/imagenes/internet-meme-evolucion-arte.jpg');
     background-size: contain;
 } 
@@ -116,7 +116,7 @@
             CONTENEDOR CENTRAL - MEME
 +++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-.contenedor-gral{
+body{
     background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg');
     background-size:contain;
 }
