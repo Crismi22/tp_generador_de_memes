@@ -434,24 +434,7 @@ label{
 
 /* ****fin de columna texto****** */
 
-/* +++++++++++
-    BOTON PARA CERRAR PANEL (RESPONSIVE)
-++++++++++ */
-.panel-close-button {
-    width: 30px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    color: #9c70e2;
-    background-color: #393e49;
-    position: fixed;
-    top:15px;
-    right: 15px;
-    display: none;
-}
-
-/* 
+/*
 ******************************************
                 REPONSIVE
 ******************************************
