@@ -32,7 +32,7 @@ btnDescarga.addEventListener('click', () =>
 // ********************************************************
 // const panel = document.getElementById('panel');
 // const btnPanelCierre = document.getElementById('panel-close-button');
-// revisar btn funcion para cerrar panel desde responsive
+// ********revisar btn funcion para cerrar panel desde responsive*****
 const btnImg = document.getElementById('button-text-img');
 const btnText = document.getElementById('button-text-text');
 const panelImagen = document.getElementById('panel-imagen');
@@ -59,7 +59,6 @@ btnText.addEventListener('click',() => {
 // **********************************
 //         URL INPUT
 // **********************************
-
 const urlImg = document.getElementById('url-img');
 urlImg.addEventListener('input', () => {
   imagen.style = `background-image: url(${urlImg.value})`;
@@ -73,29 +72,43 @@ const fondoColorImg = document.getElementById('incolor');
 const colorValor = document.getElementById('imagen-color');
 const mezcla = document.getElementById('mezcla');
 
-
-
 fondoColorImg.addEventListener('input', (event) =>{
     const color = event.target.value;
     contenedora.style.background = color;
     colorValor.innerHTML = `${color}`;
 })
+
+//CAMBIOS SELECT IMAGEN | MEZCLA DE FONDO
+// ***************************************
 // ***revisar**
 // mezcla.addEventListener('change', (event) =>{
-//     const mexcla = event.target.value;
-//     imagen.style.backgroundBlendMode = mexcla;   
+//      const mexcla = event.target.value;
+//      imagen.style.backgroundBlendMode = mexcla;
+// })
+// mezcla.addEventListener('input', () => {
+//     const valorActual = mezcla.value;
+//     if(valorActual === 'Ninguno'){
+//         imagen.style.mixBlendMode = '';
+//     }else if(valorActual === 'Aclarar'){
+//         imagen.style.mixBlendMode = 'lighten';
+//     }else if(valorActual === 'Oscurecer'){
+//         imagen.style.mixBlendMode = 'darken';
+//     }else if(valorActual === 'Diferencia'){
+//         imagen.style.mixBlendMode = 'difference';
+//     }else if(valorActual === 'Luminosidad'){
+//         imagen.style.mixBlendMode = 'luminosity';
+//     }else if(valorActual === 'Multiplicar'){
+//         imagen.style.mixBlendMode = 'multiply';
+//     } 
 // });
 
-
-// **********************************
-//          CAMBIOS SELECT IMAGEN
-// **********************************
-
+const actualizarTipoMezcla = (evento) => {
+    imagen.style.backgroundBlendMode = evento.target.value
+  };
 
 // *******************************************************
-//+++++PANEL DE FILTROS EN LA IMAGEN////
+//+++++PANEL DE FILTROS EN LA IMAGEN////CAJA MEME
 // *******************************************************
-
 const imagen = document.getElementById('caja-imagen');
 const brillo = document.getElementById('brillo');
 const opacidad = document.getElementById('opacidad');
@@ -148,17 +161,9 @@ const btnRestablecer = document.getElementById('btnRestablecer');
 btnRestablecer.addEventListener('click',(e) =>{restablecer(e)});
 /*****************************************************************/
 
-
-
-
-
-
-
-
 // *******************************************************
-//+++++PARTE INPUT TEXTO CAJA MEME | CHECKBOX CAJA MEME////
+//+++++INPUT TEXTO CAJA MEME | CHECKBOX CAJA MEME////
 // *******************************************************
-
 const inputTop = document.getElementById('inputTop');
 const inputBut = document.getElementById('inputBut');
 const textoTop = document.getElementById('textoTop'); 
@@ -192,7 +197,6 @@ check3.addEventListener('click', () => {
 // *******************************************************************
 //      CAMBIO TIPO DE FUENTE
 // *******************************************************************
-
 const cambioFuente = function (font) {
     document.getElementById('textoTop').style.fontFamily = font.value;
     document.getElementById('textoInf').style.fontFamily = font.value;
@@ -201,7 +205,6 @@ const cambioFuente = function (font) {
 // *******************************************************************
 //      TAMAÑO DE FUENTE
 // *******************************************************************
-
 const textSize = document.getElementById('text-size-input');
 
 textSize.addEventListener('input', (event) => {
@@ -233,30 +236,65 @@ btnAlignRight.addEventListener('click', () => {
 // **************************************************
 //      COLOR DE TEXTO Y FONDO
 // *************************************************
-
 const colorTexto = document.getElementById('incolor2');
 const colorFondoTexto = document.getElementById('incolor3');
+const textoColorValor = document.getElementById('texto-color');
+const fondoColorValor = document.getElementById('fondo-color');
 
 colorTexto.addEventListener('input', (event) => {
     const colorT = event.target.value;
     textoTop.style.color = `${colorT}`;
     textoInf.style.color = `${colorT}`;
+    textoColorValor.innerHTML = `${colorT}`;
 })
-
 colorFondoTexto.addEventListener('input', (event) => {
     const colorF = event.target.value;
     textoTop.style.background = `${colorF}`;
     textoInf.style.background = `${colorF}`;
+    fondoColorValor.innerHTML = `${colorF}`;
 })
 
 // ***********************************************************
 //      CONTORNO 
 // ***********************************************************
+const ninguno = document.getElementById('ninguno');
+const claro = document.getElementById('claro');
+const oscuro = document.getElementById('oscuro');
 
+ninguno.addEventListener('click', () => {
+    textoTop.style.textShadow = '';
+    textoInf.style.textShadow = '';
+});
+claro.addEventListener('click', () => {
+    textoTop.style.textShadow = '-2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff';
+    textoInf.style.textShadow = '-2px -2px 1px #fff, 2px 2px 1px #fff, -2px 2px 1px #fff, 2px -2px 1px #fff';
+});
+oscuro.addEventListener('click', () => {
+    textoTop.style.textShadow = '-2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000';
+    textoInf.style.textShadow = '-2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000';
+});
 
+// ***********************************************************
+//      ESPACIADO 
+// ***********************************************************
+const padding = document.getElementById('padding-input');
 
+padding.addEventListener('input', () => {
+    const valorActual = padding.value;
+    textoTop.style.padding = `${valorActual}px`;
+    textoInf.style.padding = `${valorActual}px`;
+});
 
+// ***********************************************************
+//      INTERLINEADO
+// ***********************************************************
+const lineHeight = document.getElementById('heigth-input')
 
+lineHeight.addEventListener('input', () => {
+    const valorActual = interlineadoTexto.value;
+    textoTop.style.lineHeight = valorActual;
+    textoInf.style.lineHeight = valorActual;
+});
 
 
 

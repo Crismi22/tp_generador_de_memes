@@ -116,11 +116,6 @@
             CONTENEDOR CENTRAL - MEME
 +++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-body{
-    background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg');
-    background-size:contain;
-}
-
 .contenedor-meme{
    display: flex;
    flex-direction: column;
@@ -179,7 +174,8 @@ body{
 
 /*//////// ESTILADO POR ETIQUETA/////////////////*/
 body{
-    background-color: #191e2b;
+    background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg')!important;
+    background-size:contain;
 }
 h1{
     font-size: 1.8em;
@@ -381,7 +377,8 @@ label{
     margin: 5px 0 ;
     align-items: center;
     justify-content: flex-start;
-    align-content: center;  
+    align-content: center;
+    color: inherit  
 }
 
 .color-texto,.btn-color{
