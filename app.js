@@ -81,10 +81,10 @@ fondoColorImg.addEventListener('input', (event) =>{
 //CAMBIOS SELECT IMAGEN | MEZCLA DE FONDO
 // ***************************************
 // ***revisar**
-// mezcla.addEventListener('change', (event) =>{
-//      const mexcla = event.target.value;
-//      imagen.style.backgroundBlendMode = mexcla;
-// })
+mezcla.addEventListener('change', (event) =>{
+     const mexcla = event.target.value;
+     imagen.style.backgroundBlendMode = mexcla;
+})
 // mezcla.addEventListener('input', () => {
 //     const valorActual = mezcla.value;
 //     if(valorActual === 'Ninguno'){
@@ -102,9 +102,9 @@ fondoColorImg.addEventListener('input', (event) =>{
 //     } 
 // });
 
-const actualizarTipoMezcla = (evento) => {
-    imagen.style.backgroundBlendMode = evento.target.value
-  };
+// const actualizarTipoMezcla = (evento) => {
+//     imagen.style.backgroundBlendMode = evento.target.value
+//   };
 
 // *******************************************************
 //+++++PANEL DE FILTROS EN LA IMAGEN////CAJA MEME
@@ -299,4 +299,3 @@ lineHeight.addEventListener('input', () => {
 
 
 
-// DALE KRIS!! VOS PODES CON ESTO! SOS INTELIGENTE, SOS CAPAZ Y TE LO MERECES PARA SEGUIR AVANZANDO Y CRECIENDO. FALTA CADA VEZ MENOS PARA EL FUTURO QUE ESTAS ESPERANDO FELIZ********
