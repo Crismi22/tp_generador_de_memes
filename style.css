@@ -10,6 +10,7 @@
 
 .modo-light{
    background-color: #9f4ae4;
+   background-image: url('./imagenes/modo-claro.jpg');
     
 }
 .modo-light .header{
