@@ -23,7 +23,7 @@
     background-color: #41315f;
 }
 .modo-light .contenedor-gral{
-    background-image: url('/tp-generador-de-memes/imagenes/internet-meme-evolucion-arte.jpg');
+    background-image: url(/tp-generador-de-memes/imagenes/internet-meme-evolucion-arte.jpg);
     background-size: contain;
 } 
 .modo-light .caja-meme{
@@ -176,7 +176,7 @@
 /*//////// ESTILADO POR ETIQUETA/////////////////*/
 body{
     background-color: #252935;;
-    background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg');
+    background-image: url(/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg);
     background-size:cover;
     background-repeat: no-repeat;
 }
