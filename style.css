@@ -176,7 +176,7 @@
 /*//////// ESTILADO POR ETIQUETA/////////////////*/
 body{
     background-color: #252935;;
-    background-image: url(/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg);
+    background-image: url('./imagenes/prueba.jpg');
     background-size:cover;
     background-repeat: no-repeat;
 }
