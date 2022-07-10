@@ -1,5 +1,5 @@
 // ********************************************
-//                 MODO OSCURO        
+//      MODO CLARO | MODO OSCURO        
 // ********************************************
 
 const light = document.getElementById('button-modo-dark');
@@ -28,15 +28,13 @@ btnDescarga.addEventListener('click', () =>
   domtoimage.toBlob(document.getElementById('caja-meme')).then(blob => saveAs(blob, 'mi-meme.png')));
 
 // ********************************************************
-// CAMBIO DE COLUMNA IMAGEN A COLUMNA TEXTO CON BOTONES NAV 
+// CAMBIO DE COLUMNA IMAGEN A COLUMNA TEXTO CON BOTONES NAV | BOTON CIERRE RESPONSIVE
 // ********************************************************
-// const panel = document.getElementById('panel');
-// const btnPanelCierre = document.getElementById('panel-close-button');
-// ********revisar btn funcion para cerrar panel desde responsive*****
 const btnImg = document.getElementById('button-text-img');
 const btnText = document.getElementById('button-text-text');
 const panelImagen = document.getElementById('panel-imagen');
 const panelTexto = document.getElementById('panel-texto');
+const btnPanelCierre = document.getElementById('panel-close-button');
 
 btnImg.addEventListener('click', () => {
     panelImagen.style.display = "block";
@@ -48,13 +46,10 @@ btnText.addEventListener('click',() => {
     panelImagen.style.display = "none";
 })
 
-
-
-// btnPanelCierre.addEventListener('click', () =>{
-//     panelImagen.classList.toggle('ocultar');
-//     panelTexto.classList.toggle('ocultar');
-// })
-
+btnPanelCierre.addEventListener('click', () =>{
+    panelTexto.style.display = "none";
+    panelImagen.style.display = "none";
+})
 
 // **********************************
 //         URL INPUT
@@ -65,7 +60,7 @@ urlImg.addEventListener('input', () => {
 });
 
 // ***************************
-// COLOR DE FONDO DE IMAGEN 
+// COLOR DE FONDO DE IMAGEN //CAMBIOS SELECT IMAGEN | MEZCLA DE FONDO
 // **************************
 const contenedora = document.getElementById('caja-meme');
 const fondoColorImg = document.getElementById('incolor');
@@ -78,33 +73,16 @@ fondoColorImg.addEventListener('input', (event) =>{
     colorValor.innerHTML = `${color}`;
 })
 
-//CAMBIOS SELECT IMAGEN | MEZCLA DE FONDO
-// ***************************************
-// ***revisar**
-mezcla.addEventListener('change', (event) =>{
-     const mexcla = event.target.value;
-     imagen.style.backgroundBlendMode = mexcla;
-})
-// mezcla.addEventListener('input', () => {
-//     const valorActual = mezcla.value;
-//     if(valorActual === 'Ninguno'){
-//         imagen.style.mixBlendMode = '';
-//     }else if(valorActual === 'Aclarar'){
-//         imagen.style.mixBlendMode = 'lighten';
-//     }else if(valorActual === 'Oscurecer'){
-//         imagen.style.mixBlendMode = 'darken';
-//     }else if(valorActual === 'Diferencia'){
-//         imagen.style.mixBlendMode = 'difference';
-//     }else if(valorActual === 'Luminosidad'){
-//         imagen.style.mixBlendMode = 'luminosity';
-//     }else if(valorActual === 'Multiplicar'){
-//         imagen.style.mixBlendMode = 'multiply';
-//     } 
-// });
+const fondoColor = () => {
+    imagen.style.backgroundColor = fondoColorImg.value;
+}
 
-// const actualizarTipoMezcla = (evento) => {
-//     imagen.style.backgroundBlendMode = evento.target.value
-//   };
+const actualizarTipoMezcla = () => {
+    imagen.style.backgroundBlendMode = mezcla.value;
+};
+
+fondoColorImg.addEventListener('change', fondoColor);
+mezcla.addEventListener('change', actualizarTipoMezcla);
 
 // *******************************************************
 //+++++PANEL DE FILTROS EN LA IMAGEN////CAJA MEME
@@ -159,20 +137,18 @@ const restablecer = (e) => {
 
 const btnRestablecer = document.getElementById('btnRestablecer');
 btnRestablecer.addEventListener('click',(e) =>{restablecer(e)});
-/*****************************************************************/
+
 
 // *******************************************************
-//+++++INPUT TEXTO CAJA MEME | CHECKBOX CAJA MEME////
+//      INPUT TEXTO CAJA MEME | CHECKBOX CAJA MEME////
 // *******************************************************
 const inputTop = document.getElementById('inputTop');
 const inputBut = document.getElementById('inputBut');
 const textoTop = document.getElementById('textoTop'); 
 const textoInf = document.getElementById('textoInf');
-const cajaMeme = document.getElementById('caja-imagen');
 
 const check1 = document.getElementById('not-top');
 const check2 = document.getElementById('not-button');
-const check3 = document.getElementById('sin-fondo');
 
 inputTop.addEventListener('input', (event) => {
     const textoIngresado = event.target.value;
@@ -186,12 +162,9 @@ inputBut.addEventListener('input', (event) => {
 check1.addEventListener('click', () => {
     textoTop.classList.toggle('ocultar');
 }) 
+
 check2.addEventListener('click', () => {
     textoInf.classList.toggle('ocultar');
-})
-check3.addEventListener('click', () => {
-    textoTop.classList.toggle('transparente');
-    textoInf.classList.toggle('transparente')
 })
 
 // *******************************************************************
@@ -234,12 +207,14 @@ btnAlignRight.addEventListener('click', () => {
 });
 
 // **************************************************
-//      COLOR DE TEXTO Y FONDO
+//      COLOR DE TEXTO Y FONDO | FONDO TRANSPARENTE
 // *************************************************
 const colorTexto = document.getElementById('incolor2');
 const colorFondoTexto = document.getElementById('incolor3');
 const textoColorValor = document.getElementById('texto-color');
 const fondoColorValor = document.getElementById('fondo-color');
+
+const check3 = document.getElementById('sin-fondo');
 
 colorTexto.addEventListener('input', (event) => {
     const colorT = event.target.value;
@@ -253,6 +228,20 @@ colorFondoTexto.addEventListener('input', (event) => {
     textoInf.style.background = `${colorF}`;
     fondoColorValor.innerHTML = `${colorF}`;
 })
+
+check3.addEventListener('change', (event) => {
+    if (event.target.checked) {
+        textoTop.style.backgroundColor = 'transparent';
+        textoInf.style.backgroundColor = 'transparent';
+        textoTop.style.position = 'absolute';
+        textoInf.style.position = 'absolute';
+    }
+    else {
+        textoTop.style.backgroundColor = colorFondoTexto.value;
+        textoInf.style.backgroundColor = colorFondoTexto.value;
+    }   
+});
+
 
 // ***********************************************************
 //      CONTORNO 
@@ -280,9 +269,8 @@ oscuro.addEventListener('click', () => {
 const padding = document.getElementById('padding-input');
 
 padding.addEventListener('input', () => {
-    const valorActual = padding.value;
-    textoTop.style.padding = `${valorActual}px`;
-    textoInf.style.padding = `${valorActual}px`;
+    textoTop.style.padding = `${padding.value}px`;
+    textoInf.style.padding = `${padding.value}px`;
 });
 
 // ***********************************************************
@@ -291,9 +279,8 @@ padding.addEventListener('input', () => {
 const lineHeight = document.getElementById('heigth-input')
 
 lineHeight.addEventListener('input', () => {
-    const valorActual = interlineadoTexto.value;
-    textoTop.style.lineHeight = valorActual;
-    textoInf.style.lineHeight = valorActual;
+    textoTop.style.lineHeight = lineHeight.value;
+    textoInf.style.lineHeight =lineHeight.value;
 });
 
 

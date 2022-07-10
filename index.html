@@ -40,23 +40,23 @@
                 <p id="textoInf"
                 class="text-inferior">BOTTOM TEXT</p> 
             </div>
-            <!-- caja-meme para el boton descarga -->
+            <!-- boton descarga meme-->
             <button type="button" class="button button-descarga" id="button-descarga"><i class="fas fa-download button-icon-text"
             aria-hidden="true"></i> Descargar Meme </button>
         </main>
 <!-- ****************CONTENEDOR DE PANELES DE CAMBIOS********** -->
 <!-- +++++++++
-                    BOTON PARA OCULTAR PANEL
+        BOTON PARA OCULTAR PANEL
 ++++++++ -->
         <button class="panel-close-button" id="panel-close-button" aria-label="Cerrar panel">
             <i class="fas fa-times"></i>
         </button>
-<!--                    boton cierre -->
-        <aside class="panel-cambios ocultar" id="panel">
+
+        <aside class="panel-cambios" id="panel">
 <!-- *****************PANEL DE CAMBIOS IMAGEN********** -->
             <section class="panel-imagen columna-cambios" id="panel-imagen">
                 <h2 class="titulo-secundario-panel">IMAGEN</h2>
-                <div class="controles-varios">
+                <div>
                     <h3 class="titulo-items">URL</h3>
                     <input type="text" class="url-input" id="url-img" aria-label="url de la imagen para editar">
 
@@ -68,17 +68,17 @@
                         </div>
                         
                         <select id="mezcla" class="estilado" aria-label="mezcla de fondo de imagen">
-                            <option value="ninguno">Ninguno</option>
-                            <option value="aclarar">Aclarar</option>
-                            <option value="oscurecer">Oscurecer</option>
-                            <option value="diferencia">Diferencia</option>
-                            <option value="luminosidad">Luminosidad</option>
-                            <option value="multiplicar">Multiplicar</option>
+                            <option value="unset">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
                         </select>
                     </div>
                 </div>
         <!-- *********CONTROL FILTROS************ -->
-                <div class="controles-varios slidecontainer">
+                <div class="slidecontainer">
                     <form>
                         <h3 class="titulo-items">FILTROS</h3>
                         <label for="brillo">BRILLO</label>
@@ -106,9 +106,9 @@
                 </div>
             </section>
 <!-- *****************PANEL DE CAMBIOS TEXTO********** -->
-            <section class="panel-texto ocultar columna-cambios" id="panel-texto">
+            <section class="panel-texto columna-cambios" id="panel-texto">
                 <h2 class="titulo-secundario-panel">TEXTO</h2>
-                <div class="controles-varios">
+                <div>
                     <h3 class="titulo-items">TEXTO SUPERIOR</h3>
                     <textarea id="inputTop" aria-label="texto superior editable" name="texto superior">TOP TEXT</textarea>
                     <div class="control-checkbox">
@@ -168,7 +168,7 @@
                           transparente</label>
                     </div>
                 </div>
-                <div class="controles-varios">
+                <div>
                     <h3 class="titulo-items">CONTORNO</h3>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-primary input-color" id="ninguno">NINGUNO</button>
@@ -176,7 +176,7 @@
                         <button type="button" class="btn btn-primary input-color" id="oscuro">OSCURO</button>
                       </div>
                 </div>
-                <div class="controles-varios">
+                <div>
                     <h3 class="titulo-items">ESPACIADO</h3>
                     <input type="number" class="control-input" id="padding-input" aria-label="espaciado" min="10" max="50"
                     value="35">

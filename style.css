@@ -22,7 +22,7 @@
 .modo-light .button-nav{
     background-color: #41315f;
 }
-.modo-light body{
+.modo-light .contenedor-gral{
     background-image: url('/tp-generador-de-memes/imagenes/internet-meme-evolucion-arte.jpg');
     background-size: contain;
 } 
@@ -140,14 +140,15 @@
     padding: 15px;
     background-color: #fff;
     color: #000;
-    margin-bottom: 0;     
+    margin-top: auto;
+    margin-bottom: 0%;     
 }
 
 .text-inferior{
     padding: 15px;
     background-color: #fff;
     color: #000;
-    margin-bottom: 0;
+    margin-bottom: 0;   
 }
 
 #caja-imagen{
@@ -174,9 +175,10 @@
 
 /*//////// ESTILADO POR ETIQUETA/////////////////*/
 body{
-    background-color: #191e2b;
+    background-color: #252935;;
     background-image: url('/tp-generador-de-memes/imagenes/dark-meme-evolucion-arte.jpg');
-    background-size:contain;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 h1{
     font-size: 1.8em;
@@ -196,7 +198,6 @@ h3{
     margin-top: 10px;  
     color: #fff; 
 }
-
 textarea{
     width: 100%;
     height: 30px;
@@ -357,8 +358,7 @@ label{
     background-color: #41315f;
     font-size: .8em;
     outline: 0;
-    border: 0;
-    
+    border: 0; 
 }
 .input-color:focus{
     background-color: #574479;
@@ -432,16 +432,11 @@ label{
 
 /* +++++fin de estilado de input fondo y texto+++++++++ */
 
-/* ****fin de columna texto****** */
-
-/*
-******************************************
+/* 
+    ******************************************
                 REPONSIVE
-******************************************
+    ******************************************
 /* */
- /* +++++++++++
-    BOTON PARA CERRAR PANEL (RESPONSIVE)
-++++++++++ */
 .panel-close-button {
     width: 30px;
     height: 30px;
@@ -449,32 +444,31 @@ label{
     cursor: pointer;
     border-radius: 50%;
     color: #9c70e2;
-    background-color: #393e49;
-    position: fixed;
-    top:15px;
-    right: 15px;
+    background-color: #393e49;  
     display: none;
- 
-
 }
-
-/* 
-    ******************************************
-                REPONSIVE
-    ******************************************
-/* */
   
-@media (min-width: 1300px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     .panel-cambios {
       display: block;
       box-shadow: none;
     }
     .panel-close-button {
-      display: none;
+      display: block;
+      z-index: 6;
+      position: fixed;
+      top:15px;
+      right: 25px;
+    }
+    .columna-cambios{
+        width: 30%;
+    }
+    .control-fuente, .btn-group{
+        flex-wrap: wrap;
     }
 }
   
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     h1{
       font-size: 26px;
     }
