@@ -9,7 +9,8 @@
 ***************************************************** */
 
 .modo-light{
-   background-color: #9f4ae4;   
+   background-color: #9f4ae4;
+    
 }
 .modo-light .header{
     background-color:#b49adf;
@@ -23,8 +24,10 @@
     background-color: #41315f;
 }
 .modo-light .contenedor-gral{
-    background-image: url('./imagenes/prueba.jpg');
-    background-size: contain;
+    background-image: url('./imagenes/modo-claro.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+
 } 
 .modo-light .caja-meme{
     border: 1px solid #41315f;
@@ -115,6 +118,11 @@
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++
             CONTENEDOR CENTRAL - MEME
 +++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.contenedor-gral{
+    background-image: url('./imagenes/modo-oscuro.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
 
 .contenedor-meme{
    display: flex;
@@ -176,9 +184,6 @@
 /*//////// ESTILADO POR ETIQUETA/////////////////*/
 body{
     background-color: #252935;;
-    background-image: url('./imagenes/prueba.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
 }
 h1{
     font-size: 1.8em;
