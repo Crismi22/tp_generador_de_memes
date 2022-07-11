@@ -141,6 +141,7 @@
     flex-direction: column;
     font-size: 40px;
     font-weight: 800;
+    position: relative;
     background-size:cover;
     background-color: #000; 
 } 
@@ -149,17 +150,22 @@
     padding: 15px;
     background-color: #fff;
     color: #000;
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: 0%;     
 }
-
+#textoTop{
+    top: 0;
+}
 .text-inferior{
     padding: 15px;
     background-color: #fff;
     color: #000;
-    margin-bottom: 0;   
+    margin-bottom: 0;
+    position:relative;   
 }
-
+#textoInf{
+    bottom: 0;
+}
 #caja-imagen{
     width: 100%;
     flex-grow: 1;

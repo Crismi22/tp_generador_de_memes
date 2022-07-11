@@ -239,8 +239,10 @@ check3.addEventListener('change', (event) => {
     else {
         textoTop.style.backgroundColor = colorFondoTexto.value;
         textoInf.style.backgroundColor = colorFondoTexto.value;
+        textoTop.style.position = 'relative';
+        textoInf.style.position = 'relative';
     }   
-});
+});     
 
 
 // ***********************************************************

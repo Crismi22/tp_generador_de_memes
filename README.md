@@ -14,5 +14,8 @@
 > Un gran poder conlleva una gran responsabilidad - Tio Ben
 
 _Espero que les guste mi página, esta creada con mucho esfuerzo y horas silla :)_
+### Pseudocodigo de input texto TOP TEXT
+![PSEUDOCODIGO DE INPUT TEXTO TOP TEXT](./imagenes/PSEUDOCODIGO.png)
+
 
 README HECHO CON [Markdown](https://www.markdownguide.org/cheat-sheet/)
