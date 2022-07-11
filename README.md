@@ -9,7 +9,7 @@
 [Genedaror de meme](https://crismi22.github.io/tp_generador_de_memes/)
 
 
-![captura](./imagenes/captura_de_pagina.png)
+![captura](./imagenes/captura.png)
 
 > Un gran poder conlleva una gran responsabilidad - Tio Ben
 
